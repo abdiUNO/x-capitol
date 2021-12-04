@@ -10,30 +10,30 @@ export default {
     initialColorModeName: 'light',
   },
   colors: {
-    text: '#343D48 !important', // body color and primary color
-    textSecondary: '#02073E !important', // secondary body color
-    heading: '#0F2137 !important', // primary heading color
-    headingSecondary: '#343D48 !important', // heading color
-    background: '#FFFFFF !important', // body background color
-    backgroundSecondary: '#F9FBFD !important', // secondary background color
-    borderColor: '#F3F4F5 !important', // border color
-    primary: '#28DDB2 !important', // primary button and link color
-    secondary: '#EF9E48 !important', // secondary color - can be used for hover states
-    muted: '#7B8188 !important', // muted color
-    accent: '#609 !important', // a contrast color for emphasizing UI
-    dark: '#10132D !important',
-    link: '#4F96FF !important', // default link color
+    text: '#343D48', // body color and primary color
+    textSecondary: '#02073E', // secondary body color
+    heading: '#0F2137', // primary heading color
+    headingSecondary: '#343D48', // heading color
+    background: '#FFFFFF', // body background color
+    backgroundSecondary: '#F9FBFD', // secondary background color
+    borderColor: '#F3F4F5', // border color
+    primary: '#28DDB2', // primary button and link color
+    secondary: '#EF9E48', // secondary color - can be used for hover states
+    muted: '#7B8188', // muted color
+    accent: '#609', // a contrast color for emphasizing UI
+    dark: '#10132D',
+    link: '#4F96FF', // default link color
 
     // highlight	a background color for highlighting text
-    modes: {
-      dark: {
-        text: '#fff !important',
-        background: '#000 !important',
-        primary: '#0cf !important',
-        secondary: '#09c !important',
-        muted: '#111 !important',
-      },
-    },
+    // modes: {
+    //   dark: {
+    //     text: '#fff',
+    //     background: '#000',
+    //     primary: '#0cf',
+    //     secondary: '#09c',
+    //     muted: '#111',
+    //   },
+    // },
   },
   fonts: {
     body: 'DM Sans',
