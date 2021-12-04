@@ -12,11 +12,12 @@ import OurVision from '../sections/our-services';
 import AboutUs from '../sections/about-us';
 import Pricing from '../sections/pricing';
 import ServicesList from '../sections/serviceslist';
+import { NextSeo } from 'next-seo';
 
 export default function ServicesPage() {
   return (
     <Layout>
-      <SEO title="Service X Capitol" />
+      <NextSeo title="Services | X Capitol" />
       <ServicesList />
     </Layout>
   );

@@ -12,11 +12,12 @@ import OurServices from '../sections/our-services';
 import AboutUs from '../sections/about-us';
 import Pricing from '../sections/pricing';
 import Faq from '../sections/faq';
+import { NextSeo } from 'next-seo';
 
 export default function IndexPage() {
   return (
     <Layout>
-      <SEO title="X Capitol Home" />
+      <NextSeo title="X Capitol Home" />
       <Banner />
       <AboutUs />
 

@@ -15,6 +15,8 @@ const banner = '../assets/about-us.svg';
 const _banner = '../assets/services.svg';
 import SectionHeading from '../components/section-heading';
 import { LearnMore } from '../components/link';
+import { NextSeo } from 'next-seo';
+
 const checkFilledCircle = '../assets/images/icons/check-circle-filled.png';
 import AnimateWhenVisible from '../components/AnimateWhenVisible';
 
@@ -172,7 +174,7 @@ const OurVision = () => {
 export default function AboutPage() {
   return (
     <Layout>
-      <SEO title="About Us X Capitol" />
+      <NextSeo title="About | X Capitol" />
       {/*<UltimateFeatures />*/}
 
       <AboutUs />
