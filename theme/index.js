@@ -6,6 +6,9 @@ export default {
   facebook: {
     position: 'relative',
   },
+  config: {
+    initialColorModeName: 'light',
+  },
   colors: {
     text: '#343D48 !important', // body color and primary color
     textSecondary: '#02073E !important', // secondary body color
