@@ -72,3 +72,7 @@
 .accent-bg {
   background-color: #353740
 }
+
+body {
+  background: #fff !important;
+}
