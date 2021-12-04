@@ -1,18 +1,18 @@
 import React from 'react';
-import { Box, Container, jsx, Text, ThemeProvider } from 'theme-ui';
+import { Box, Container, jsx, Text, ThemeProvider, Message } from 'theme-ui';
 import theme from '../theme';
 import SEO from '../components/seo';
 import Layout from '../components/layout';
 import Banner from '../sections/banner';
 import UltimateFeatures from '../sections/ultimate-features';
 import Features from '../sections/features';
-import IntroVideo from '../sections/intro-video';
+import CallToAction from '../sections/call-to-action';
 import UsefulFeatures from '../sections/useful-features';
 import Pricing from '../sections/pricing';
 import Faq from '../sections/faq';
 import Image from '../components/image';
-const banner = '../assets/about-us.svg';
-const _banner = '../assets/services.svg';
+const banner = '../assets/work.svg';
+const _banner = '../assets/team-work.svg';
 import SectionHeading from '../components/section-heading';
 import { LearnMore } from '../components/link';
 import { NextSeo } from 'next-seo';
@@ -70,16 +70,18 @@ const AboutUs = () => {
 
             <Text
               sx={{
-                fontWeight: 600,
                 fontSize: 16,
                 display: 'flex',
                 alignItems: 'center',
                 img: {
                   mr: '10px',
                 },
+                pt: 2,
                 mb: '15px',
               }}>
-              *We currently ONLY work with clients in the U.S. and Canada.
+              <Message sx={{ padding: '16px 12px', backgroundColor: 'borderColor' }}>
+                We currently ONLY work with clients in the U.S. and Canada.
+              </Message>
             </Text>
           </Box>
         </Box>
@@ -162,7 +164,7 @@ const OurVision = () => {
                   },
                 },
               }}>
-              <Image src={'/our-vision.svg'} alt="widgets" />
+              <Image src={_banner} alt="widgets" />
             </AnimateWhenVisible>
           </Box>
         </Box>
@@ -188,21 +190,22 @@ export default function AboutPage() {
 
 const styles = {
   contentWrapper: {
-    pt: [200, 9, 7, 7, 7],
+    pt: [175, 7, 7, 7, 9],
     gap: [0, 0, 0, 0, 10, 100],
     display: ['block', 'block', 'grid'],
     gridTemplateColumns: '1fr 2fr',
     alignItems: 'center',
   },
   rightContent: {
-    p: [15, 30, 50],
+    p: [15, 50, 0],
   },
   leftContent: {
-    p: [15, 30, 50],
+    p: [15, 50, 0],
   },
   heading: {
     textAlign: 'left',
     marginBottom: [15, 15, 15, 30],
+    marginLeft: 0,
     fontWeight: 500,
     h2: {
       fontSize: ['24px', '24px', '24px', '28px', '32px', '40px'],

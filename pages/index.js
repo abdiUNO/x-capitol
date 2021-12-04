@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import Banner from '../sections/banner';
 import UltimateFeatures from '../sections/ultimate-features';
 import Features from '../sections/features';
-import IntroVideo from '../sections/intro-video';
+import CallToAction from '../sections/call-to-action';
 import UsefulFeatures from '../sections/useful-features';
 import OurServices from '../sections/our-services';
 import AboutUs from '../sections/about-us';
@@ -23,8 +23,9 @@ export default function IndexPage() {
 
       <UltimateFeatures />
 
-      {/*<IntroVideo />*/}
       <OurServices />
+      <CallToAction />
+
       <Faq />
 
       {/*<Features />*/}

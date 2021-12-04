@@ -8,7 +8,7 @@ const Play = '/assets/images/icons/play.png';
 import Modal, { CloseButton } from '../components/modal/modal';
 import ResponsiveIframe from '../components/responsive-iframe';
 
-const IntroVideo = () => {
+const CallToAction = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -16,7 +16,7 @@ const IntroVideo = () => {
       <Container>
         <SectionHeading
           sx={styles.heading}
-          title="Leading companies trust us to develop most powerful software with our talent team"
+          title="Gloss studere, tanquam velox abactor. Neuter, castus fermiums saepe anhelare."
           description="Every email, web page, and social media post makes an impression on your customers. With our software you can be confident it's impression."
         />
         <Box sx={styles.explore}>
@@ -24,11 +24,7 @@ const IntroVideo = () => {
         </Box>
         <Box sx={styles.videoWrapper}>
           <Modal isOpen={isOpen}>
-            <CloseButton
-              onClick={() => setIsOpen(false)}
-              size="24px"
-              color="#fff"
-            />
+            <CloseButton onClick={() => setIsOpen(false)} size="24px" color="#fff" />
             <ResponsiveIframe
               src="https://player.vimeo.com/video/394343710?autoplay=1&color=28DDB2&title=0&byline=0&portrait=0"
               allow="autoplay; fullscreen"
@@ -36,16 +32,8 @@ const IntroVideo = () => {
             />
           </Modal>
 
-          <Image
-            src={videoBanner}
-            className="video-banner"
-            alt="video banner"
-          />
-          <Button
-            variant="text"
-            sx={styles.playPause}
-            onClick={() => setIsOpen(true)}
-          >
+          <Image src={videoBanner} className="video-banner" alt="video banner" />
+          <Button variant="text" sx={styles.playPause} onClick={() => setIsOpen(true)}>
             <Image src={Play} alt="play" /> Watch Full video
           </Button>
         </Box>
@@ -54,7 +42,7 @@ const IntroVideo = () => {
   );
 };
 
-export default IntroVideo;
+export default CallToAction;
 
 const styles = {
   heading: {

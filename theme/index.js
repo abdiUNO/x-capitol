@@ -97,8 +97,8 @@ export default {
   section: {
     banner: {},
     ultimateFeature: {
-      pt: [0, 7, 7, 8, 8, 7, 7],
-      pb: [7, 7, 7, 8, 9, 130, 150],
+      pt: [7, 7, 7, 7, 8],
+      pb: [7, 7, 7, 7, 8],
     },
     features: {
       backgroundColor: 'backgroundSecondary',
@@ -120,8 +120,8 @@ export default {
       pb: [7, 7, 7, 7, 150],
     },
     aboutUs: {
-      pt: [10, 9, 9, 9, 7],
-      pb: [7, 7, 7, 7, 6, 8],
+      pt: [0, 7, 7, 8, 8, 7, 7],
+      pb: [7, 7, 7, 8, 9, 130, 150],
     },
     pricing: {
       pt: [7, 7, 7, 7, 8],

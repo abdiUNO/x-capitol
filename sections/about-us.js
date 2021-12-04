@@ -2,7 +2,7 @@ import { jsx, Box, Container, Text } from 'theme-ui';
 import SectionHeading from '../components/section-heading';
 import { LearnMore } from '../components/link';
 import Image from '../components/image';
-const banner = '/assets/about-us.svg';
+const banner = '/assets/personal-finance.svg';
 import AnimateWhenVisible from '../components/AnimateWhenVisible';
 
 const AboutUs = () => {

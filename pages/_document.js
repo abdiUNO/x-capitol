@@ -20,10 +20,7 @@ class CustomDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Eczar:400,700|Montserrat:400,700|Poppins:300,400|Roboto+Mono|Roboto:400,500,900|Spectral"
             rel="stylesheet"
           />
-          <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-
           <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
-
           <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
         </Head>
         <body>
