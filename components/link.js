@@ -19,8 +19,6 @@ export function NavLink({ path, label, children, ...rest }) {
   );
 }
 export function Link({ path, label, children, target, ...rest }) {
-  console.log(path);
-
   const props = {
     target,
     ...rest,

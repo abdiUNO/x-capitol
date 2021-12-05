@@ -8,8 +8,18 @@ import Layout from '../../components/layout';
 
 import config from '../../lib/config';
 
+function truncate(str, n, useWordBoundary) {
+  if (str.length <= n) {
+    return str;
+  }
+  const subString = str.substr(0, n - 1); // the original check
+  return (
+    (useWordBoundary ? subString.substr(0, subString.lastIndexOf(' ')) : subString) +
+    '&hellip;'
+  );
+}
+
 export default function BlogPage({ posts }) {
-  console.log(posts);
   return (
     <Layout>
       <Head>
@@ -17,8 +27,12 @@ export default function BlogPage({ posts }) {
         <title>Blog | X Capitol</title>
       </Head>
       <NextSeo title="Blog | X Capitol" />
-      <Box sx={{ p: 4 }}>
-        <PostList posts={posts} />
+      <Box sx={{ p: 1, height: '100vh' }}>
+        <Container>
+          <Box sx={styles.contentWrapper}>
+            <PostList posts={posts} />
+          </Box>
+        </Container>
       </Box>
     </Layout>
   );
@@ -26,10 +40,21 @@ export default function BlogPage({ posts }) {
 
 export async function getStaticProps() {
   const posts = listPostContent(1, config.posts_per_page);
-
+  console.log(posts);
   return {
     props: {
       posts,
     },
   };
 }
+
+const styles = {
+  contentWrapper: {
+    pt: [9, 9, 9, 9, 150],
+    pb: [7, 7, 7, 7, 150],
+    display: 'flex',
+    width: ['100%', null, null, '650px', '745px'],
+    flexDirection: 'column',
+    mx: 'auto',
+  },
+};

@@ -36,7 +36,11 @@ export default function ServicesPage({
       </Head>
       <NextSeo title="Blog | X Capitol" />
       <Box sx={{ p: 4 }}>
-        <h1>{title}</h1>
+        <Container>
+          <Box sx={styles.contentWrapper}>
+            <h1>{title}</h1>
+          </Box>
+        </Container>
       </Box>
     </Layout>
   );
@@ -44,14 +48,16 @@ export default function ServicesPage({
 
 export const getStaticPaths = async () => {
   const paths = fetchPostContent().map((it) => '/blog/' + it.slug);
+  console.log('test');
   return {
     paths,
     fallback: false,
   };
 };
 
-export const getStaticProps = async ({ params }) => {
+export async function getStaticProps({ params }) {
   const slug = params.post;
+  console.log(params);
   const source = fs.readFileSync(slugToPostContent[slug].fullPath, 'utf8');
   const { content, data } = matter(source, {
     engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) },
@@ -68,4 +74,4 @@ export const getStaticProps = async ({ params }) => {
       source: mdxSource,
     },
   };
-};
+}

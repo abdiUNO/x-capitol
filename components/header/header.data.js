@@ -11,4 +11,8 @@ export default [
     path: 'services',
     label: 'Services',
   },
+  {
+    path: 'blog',
+    label: 'Blog',
+  },
 ];
