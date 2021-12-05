@@ -3,7 +3,7 @@ import SectionHeading from '../components/section-heading';
 import { LearnMore } from '../components/link';
 import Image from '../components/image';
 
-const banner = '/assets/services.svg';
+const banner = '/assets/products.svg';
 const checkFilledCircle = '/assets/images/icons/check-circle-filled.png';
 import AnimateWhenVisible from '../components/AnimateWhenVisible';
 
@@ -122,7 +122,7 @@ const styles = {
     alignItems: 'center',
   },
   rightContent: {
-    p: [15, 30, 50],
+    p: [15, 30],
   },
   heading: {
     textAlign: 'left',

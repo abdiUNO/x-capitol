@@ -24,7 +24,7 @@ export function Link({ path, label, children, target, ...rest }) {
   const props = {
     target,
     ...rest,
-    href: path !== '' && path,
+    href: path !== '' ? path : '',
   };
   return (
     <NextLink href={path}>

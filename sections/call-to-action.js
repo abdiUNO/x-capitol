@@ -8,45 +8,22 @@ const Play = '/assets/images/icons/play.png';
 import Modal, { CloseButton } from '../components/modal/modal';
 import ResponsiveIframe from '../components/responsive-iframe';
 
-const IntroVideo = () => {
+const CallToAction = ({ backgroundColor }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Box as="section" sx={styles.section} variant="section.introVideo">
+    <Box
+      as="section"
+      sx={{ backgroundColor: backgroundColor || 'backgroundSecondary' }}
+      variant="section.callAction">
       <Container>
-        <SectionHeading
-          sx={styles.heading}
-          title="Leading companies trust us to develop most powerful software with our talent team"
-          description="Every email, web page, and social media post makes an impression on your customers. With our software you can be confident it's impression."
-        />
+        <SectionHeading sx={styles.heading} title="Get your business funded today!" />
         <Box sx={styles.explore}>
-          <LearnMore path="#!" label="Explore More" />
-        </Box>
-        <Box sx={styles.videoWrapper}>
-          <Modal isOpen={isOpen}>
-            <CloseButton
-              onClick={() => setIsOpen(false)}
-              size="24px"
-              color="#fff"
-            />
-            <ResponsiveIframe
-              src="https://player.vimeo.com/video/394343710?autoplay=1&color=28DDB2&title=0&byline=0&portrait=0"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-            />
-          </Modal>
-
-          <Image
-            src={videoBanner}
-            className="video-banner"
-            alt="video banner"
-          />
           <Button
-            variant="text"
-            sx={styles.playPause}
-            onClick={() => setIsOpen(true)}
-          >
-            <Image src={Play} alt="play" /> Watch Full video
+            as="a"
+            variant="primaryMd"
+            sx={{ fontSize: '22px', lineHeight: '55px' }}>
+            Contact Us Today
           </Button>
         </Box>
       </Container>
@@ -54,14 +31,21 @@ const IntroVideo = () => {
   );
 };
 
-export default IntroVideo;
+export default CallToAction;
 
 const styles = {
   heading: {
     maxWidth: '620px',
     mb: [5],
     h2: {
+      fontWeight: 'bold',
+      fontSize: ['25px', null, '30px', '30px', '37px', '35px', '55px'],
+      pl: [3, 4, 1],
+      pr: [3, 4, 1],
+      lineHeight: 1.33,
+      textTransform: 'capitalize',
       letterSpacing: 'heading',
+      color: 'textSecondary',
     },
   },
   explore: {

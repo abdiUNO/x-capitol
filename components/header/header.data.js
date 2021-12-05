@@ -9,6 +9,6 @@ export default [
   },
   {
     path: 'services',
-    label: 'Service',
+    label: 'Services',
   },
 ];

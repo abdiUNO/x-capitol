@@ -6,6 +6,9 @@ export default {
   facebook: {
     position: 'relative',
   },
+  config: {
+    initialColorModeName: 'light',
+  },
   colors: {
     text: '#343D48', // body color and primary color
     textSecondary: '#02073E', // secondary body color
@@ -22,15 +25,15 @@ export default {
     link: '#4F96FF', // default link color
 
     // highlight	a background color for highlighting text
-    modes: {
-      dark: {
-        text: '#fff',
-        background: '#000',
-        primary: '#0cf',
-        secondary: '#09c',
-        muted: '#111',
-      },
-    },
+    // modes: {
+    //   dark: {
+    //     text: '#fff',
+    //     background: '#000',
+    //     primary: '#0cf',
+    //     secondary: '#09c',
+    //     muted: '#111',
+    //   },
+    // },
   },
   fonts: {
     body: 'DM Sans',
@@ -94,17 +97,18 @@ export default {
   section: {
     banner: {},
     ultimateFeature: {
-      pt: [0, 7, 7, 8, 8, 7, 7],
-      pb: [7, 7, 7, 8, 9, 130, 150],
+      pt: [7, 7, 7, 7, 8],
+      pb: [7, 7, 7, 7, 8],
     },
     features: {
       backgroundColor: 'backgroundSecondary',
       pt: [7, 7, 7, 7, 8],
       pb: [7, 7, 7, 7, 8],
     },
-    introVideo: {
+    callAction: {
+      backgroundColor: 'backgroundSecondary',
       pt: [7, 7, 7, 7, 8],
-      pb: [7, 7, 7, 7, 8],
+      pb: [6, 6, 6, 6, 7],
     },
     usefulFeatures: {
       backgroundColor: 'backgroundSecondary',
@@ -117,8 +121,8 @@ export default {
       pb: [7, 7, 7, 7, 150],
     },
     aboutUs: {
-      pt: [10, 9, 9, 9, 7],
-      pb: [7, 7, 7, 7, 6, 8],
+      pt: [0, 7, 7, 8, 8, 7, 7],
+      pb: [7, 7, 7, 8, 9, 130, 150],
     },
     pricing: {
       pt: [7, 7, 7, 7, 8],
