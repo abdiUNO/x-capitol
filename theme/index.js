@@ -105,9 +105,10 @@ export default {
       pt: [7, 7, 7, 7, 8],
       pb: [7, 7, 7, 7, 8],
     },
-    introVideo: {
+    callAction: {
+      backgroundColor: 'backgroundSecondary',
       pt: [7, 7, 7, 7, 8],
-      pb: [7, 7, 7, 7, 8],
+      pb: [6, 6, 6, 6, 7],
     },
     usefulFeatures: {
       backgroundColor: 'backgroundSecondary',
