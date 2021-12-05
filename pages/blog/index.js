@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import { jsx, Container, Box, Text } from 'theme-ui';
 
-import PostList from '../../components/PostList';
+import PostList from '../../components/postlist';
 import Layout from '../../components/layout';
 
 import config from '../../lib/config';
