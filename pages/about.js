@@ -153,8 +153,9 @@ const OurVision = () => {
           <Box sx={styles.rightContent}>
             <AnimateWhenVisible
               variants={{
-                hidden: { opacity: 0 },
+                hidden: { y: 100, opacity: 0 },
                 visible: {
+                  y: 0,
                   opacity: 1,
                   transition: {
                     type: 'spring',
@@ -164,7 +165,7 @@ const OurVision = () => {
                   },
                 },
               }}>
-              <Image src={_banner} alt="widgets" />
+              <Image src={'/assets/team-work.svg'} alt="widgets" />
             </AnimateWhenVisible>
           </Box>
         </Box>
@@ -181,7 +182,7 @@ export default function AboutPage() {
 
       <AboutUs />
       <OurVision />
-
+      <CallToAction backgroundColor={'background'} />
       {/*<Features />*/}
       {/*<Pricing />*/}
     </Layout>

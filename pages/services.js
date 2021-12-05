@@ -19,6 +19,7 @@ export default function ServicesPage() {
     <Layout>
       <NextSeo title="Services | X Capitol" />
       <ServicesList />
+      <CallToAction backgroundColor="background" />
     </Layout>
   );
 }
