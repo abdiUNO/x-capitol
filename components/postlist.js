@@ -44,15 +44,14 @@ const PostList = ({ posts, pagination }) => {
               <li key={i}>
                 <AnimateWhenVisible
                   variants={{
-                    hidden: { y: 100, opacity: 0 },
+                    hidden: { y: 50, opacity: 0 },
                     visible: {
                       y: 0,
                       opacity: 1,
                       transition: {
                         type: 'spring',
-                        damping: 15,
-                        bounce: 0.4,
-                        duration: 0.8,
+                        bounce: 0.2,
+                        duration: 0.4,
                       },
                     },
                     enter: {
