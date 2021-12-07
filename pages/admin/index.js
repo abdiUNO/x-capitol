@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { jsx, Container, Box, Text, Spinner, Flex } from 'theme-ui';
+import { Box, Container, Flex, Spinner, Text } from 'theme-ui';
 
 const CMS_CONFIG = {};
 const Loading = () => (

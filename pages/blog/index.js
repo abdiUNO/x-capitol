@@ -1,12 +1,14 @@
 import { countPosts, listPostContent } from '../../lib/posts';
 import { NextSeo } from 'next-seo';
-import Head from 'next/head';
-import { jsx, Container, Box, Text } from 'theme-ui';
+import { Box, Container } from 'theme-ui';
 
 import PostList from '../../components/postlist';
 import Layout from '../../components/layout';
-
+import Script from 'next/script';
 import config from '../../lib/config';
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import BasicMeta from '../../components/meta/BasicMeta';
 
 function truncate(str, n, useWordBoundary) {
   if (str.length <= n) {
@@ -20,16 +22,28 @@ function truncate(str, n, useWordBoundary) {
 }
 
 export default function BlogPage({ posts, pagination }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <Layout>
-      <NextSeo title="Blog | X Capitol" />
+    <Layout animate={true}>
+      <BasicMeta url="/blog" description={'blog index page'} title={'Blog'} />
 
-      <NextSeo title="Blog | X Capitol" />
-      <Box sx={{ p: 1 }}>
+      <Script src="//embed.typeform.com/next/embed.js" />
+      <Box sx={{ p: 1, pt: 4 }}>
         <Container>
-          <Box sx={styles.contentWrapper}>
-            <PostList posts={posts} pagination={pagination} />
-          </Box>
+          <motion.div
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            variants={{
+              enter: { transition: { staggerChildren: 0.1 } },
+              exit: { transition: { staggerChildren: 0.1 } },
+            }}>
+            <Box sx={styles.contentWrapper}>
+              <PostList posts={posts} pagination={pagination} />
+            </Box>
+          </motion.div>
         </Container>
       </Box>
     </Layout>

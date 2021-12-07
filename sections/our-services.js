@@ -15,7 +15,7 @@ const OurServices = () => {
           <Box sx={styles.leftContent}>
             <AnimateWhenVisible
               variants={{
-                hidden: { y: 100, opacity: 0 },
+                hidden: { y: 25, opacity: 0 },
                 visible: {
                   y: 0,
                   opacity: 1,
@@ -92,7 +92,7 @@ const OurServices = () => {
           <Box sx={styles.rightContent}>
             <AnimateWhenVisible
               variants={{
-                hidden: { y: 100, opacity: 0 },
+                hidden: { y: 25, opacity: 0 },
                 visible: {
                   y: 0,
                   opacity: 1,
@@ -122,7 +122,7 @@ const styles = {
     alignItems: 'center',
   },
   rightContent: {
-    p: [15, 30],
+    p: [35, 30],
   },
   heading: {
     textAlign: 'left',

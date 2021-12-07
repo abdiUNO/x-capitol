@@ -1,24 +1,41 @@
 import { countPosts, listPostContent } from '../../../lib/posts';
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
-import { jsx, Container, Box, Text } from 'theme-ui';
+import { Box, Container } from 'theme-ui';
 
 import PostList from '../../../components/postlist';
 import Layout from '../../../components/layout';
-
+import Script from 'next/script';
 import config from '../../../lib/config';
+import { motion } from 'framer-motion';
+import BasicMeta from '../../../components/meta/BasicMeta';
 
-export default function Page({ posts, pagination }) {
+export default function Page({ posts, pagination, page }) {
   return (
-    <Layout>
+    <Layout animate={true}>
       <Head>
         <title>Blog | X Capitol</title>
       </Head>
-      <NextSeo title="Blog | X Capitol" />
+      <BasicMeta
+        url={`/posts/page/${page}`}
+        description={'blog all post'}
+        title={'All posts'}
+      />
+      <Script src="//embed.typeform.com/next/embed.js" />
+
       <Box sx={{ p: 1 }}>
         <Container>
           <Box sx={styles.contentWrapper}>
-            <PostList posts={posts} pagination={pagination} />
+            <motion.div
+              initial="initial"
+              animate="enter"
+              exit="exit"
+              variants={{
+                enter: { transition: { staggerChildren: 0.1 } },
+                exit: { transition: { staggerChildren: 0.1 } },
+              }}>
+              <PostList posts={posts} pagination={pagination} />
+            </motion.div>
           </Box>
         </Container>
       </Box>
@@ -26,7 +43,8 @@ export default function Page({ posts, pagination }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
+  const page = parseInt(params.page);
   const posts = listPostContent(1, config.posts_per_page);
   const pagination = {
     current: 1,
@@ -36,6 +54,7 @@ export async function getStaticProps() {
     props: {
       posts,
       pagination,
+      page,
     },
   };
 }

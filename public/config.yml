@@ -10,12 +10,12 @@ site_url: https://xcapitalfunding.net
 display_url: https://xcapitalfunding.net
 logo_url: https://xcapitalfunding.net/assets/images/x-capitol-logo.png
 collections:
-#  - name: "meta"
-#    label: "Meta"
-#    delete: false
-#    editor:
-#      preview: false
-#    files:
+  - name: "meta"
+    label: "Meta"
+    delete: false
+    editor:
+      preview: false
+    files:
 #      - name: "authors"
 #        label: "Authors"
 #        file: "meta/authors.yml"
@@ -37,24 +37,24 @@ collections:
 #              - label: "Introduction"
 #                name: "introduction"
 #                widget: "text"
-#      - name: "tags"
-#        label: "Tags"
-#        file: "meta/tags.yml"
-#        description: "List of tags"
-#        fields:
-#          - name: tags
-#            label: Tags
-#            label_singular: "Tag"
-#            widget: list
-#            fields:
-#              - label: "Slug"
-#                name: "slug"
-#                widget: "string"
-#                hint: "The part of a URL identifies the tag"
-#              - label: "Display Name"
-#                name: "name"
-#                widget: "string"
-#                hint: "Tag name for displaying on the site"
+      - name: "tags"
+        label: "Tags"
+        file: "meta/tags.yml"
+        description: "List of tags"
+        fields:
+          - name: tags
+            label: Tags
+            label_singular: "Tag"
+            widget: list
+            fields:
+              - label: "Slug"
+                name: "slug"
+                widget: "string"
+                hint: "The part of a URL identifies the tag"
+              - label: "Display Name"
+                name: "name"
+                widget: "string"
+                hint: "Tag name for displaying on the site"
 #  - name: "config"
 #    label: "Config"
 #    delete: false
@@ -127,21 +127,21 @@ collections:
 #        displayFields:
 #          - "authors.*.name"
 #        valueField: "authors.*.slug"
-#      - label: Tags
-#        label_singular: "Tag"
-#        name: "tags"
-#        widget: list
-#        summary: "{{fields.tag}}"
-#        field:
-#          label: Tag
-#          name: tag
-#          widget: relation
-#          collection: "meta"
-#          file: "tags"
-#          searchFields:
-#            - "tags.*.name"
-#          displayFields:
-#            - "tags.*.name"
-#          valueField: "tags.*.slug"
+      - label: Tags
+        label_singular: "Tag"
+        name: "tags"
+        widget: list
+        summary: "{{fields.tag}}"
+        field:
+          label: Tag
+          name: tag
+          widget: relation
+          collection: "meta"
+          file: "tags"
+          searchFields:
+            - "tags.*.name"
+          displayFields:
+            - "tags.*.name"
+          valueField: "tags.*.slug"
 
 
