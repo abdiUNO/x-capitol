@@ -1,7 +1,7 @@
 import { Box, Divider, Heading, Paragraph, Text } from 'theme-ui';
 import { rgba } from 'polished';
 
-import Pagination from './Pagination';
+import Pagination from './pagination';
 
 const capitalize = (str, lower = false) =>
   (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) =>
