@@ -22,6 +22,9 @@ class CustomDocument extends Document {
           />
           <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
           <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+          <script
+            type="text/javascript"
+            src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         </Head>
         <body>
           <Main />
