@@ -1,4 +1,4 @@
-import { jsx, Box, Text } from 'theme-ui';
+import { Box, Text } from 'theme-ui';
 import { rgba } from 'polished';
 
 const Feature = ({ feature }) => {
@@ -26,15 +26,7 @@ const styles = {
     justifyContent: 'center',
     // maxWidth: 300,
     flexDirection: 'column',
-    padding: [
-      '0 5px',
-      '0 18px',
-      '0 18px',
-      '0 12px',
-      '0 20px',
-      '0 25px',
-      '0 59px',
-    ],
+    padding: ['0 5px', '0 18px', '0 18px', '0 12px', '0 20px', '0 25px', '0 59px'],
     textAlign: 'center',
     minHeight: [150, 150, 150, 185, 240, 280, 320],
     width: ['auto', 'auto', 'auto', 177, 225, 258, 300],

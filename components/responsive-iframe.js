@@ -1,4 +1,4 @@
-import { jsx, Box } from 'theme-ui';
+import { Box } from 'theme-ui';
 
 const ResponsiveIframe = ({ src, children, ...props }) => {
   return (

@@ -1,9 +1,10 @@
-import { jsx, Box, Container, Text } from 'theme-ui';
+import { Box, Container, Text } from 'theme-ui';
 import SectionHeading from '../components/section-heading';
 import { LearnMore } from '../components/link';
 import Image from '../components/image';
-const banner = '/assets/personal-finance.svg';
 import AnimateWhenVisible from '../components/AnimateWhenVisible';
+
+const banner = '/assets/personal-finance.svg';
 
 const AboutUs = () => {
   return (

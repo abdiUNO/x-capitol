@@ -1,14 +1,13 @@
-import { jsx, Box, Container, MenuButton, Flex, Button } from 'theme-ui';
+import { Box, Button, Container, Flex, MenuButton } from 'theme-ui';
 import { useState } from 'react';
-import { GrClose } from 'react-icons/gr';
 import Sticky from 'react-stickynode';
 import Logo from '../logo';
-import { NavLink } from '../link';
 import menuItems from './header.data';
 import { useRouter } from 'next/router';
 
 export default function Header() {
   const router = useRouter();
+  console.log(router);
 
   const [mobileMenu, setMobileMenu] = useState(false);
 
@@ -37,9 +36,18 @@ export default function Header() {
                 className={mobileMenu ? 'navbar active' : 'navbar'}>
                 <Box as="ul" sx={styles.navList} className={mobileMenu ? 'active' : ''}>
                   {menuItems.map(({ path, label }, i) => {
-                    const className = `nav-item ${
-                      router.asPath === '/' + path ? 'active' : ''
-                    }`;
+                    let isActive;
+
+                    if (
+                      router.asPath === `/${path}` ||
+                      (path === 'blog' && router.asPath.substr(0, 5) === '/blog')
+                    ) {
+                      isActive = 'active';
+                    } else {
+                      isActive = '';
+                    }
+
+                    const className = `nav-item ${isActive}`;
                     return (
                       <li key={i}>
                         <a

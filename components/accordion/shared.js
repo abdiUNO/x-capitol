@@ -1,4 +1,3 @@
-import { jsx } from 'theme-ui';
 import { motion } from 'framer-motion';
 
 export const AccordionButton = ({ children, ...rest }) => (

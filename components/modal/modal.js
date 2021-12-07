@@ -1,4 +1,3 @@
-import { jsx, Box } from 'theme-ui';
 import { useEffect } from 'react';
 import { GrClose } from 'react-icons/gr';
 import ReactModal from 'react-modal';
@@ -38,8 +37,7 @@ function Modal({ isOpen, closeModal, children, ...props }) {
       style={customStyles}
       closeTimeoutMS={2000}
       onRequestClose={closeModal}
-      {...props}
-    >
+      {...props}>
       {children}
     </ReactModal>
   );

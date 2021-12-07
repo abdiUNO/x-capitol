@@ -1,4 +1,4 @@
-import { jsx, Box, Heading, Text } from 'theme-ui';
+import { Box, Heading, Text } from 'theme-ui';
 
 const SectionHeading = ({ title, description, ...props }) => {
   return (

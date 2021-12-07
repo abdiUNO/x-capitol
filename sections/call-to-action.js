@@ -1,12 +1,9 @@
 import { useState } from 'react';
-import { jsx, Box, Container, Button } from 'theme-ui';
+import { Box, Button, Container } from 'theme-ui';
 import SectionHeading from '../components/section-heading';
-import Image from '../components/image';
-import { LearnMore } from '../components/link';
+
 const videoBanner = '/assets/images/video.png';
 const Play = '/assets/images/icons/play.png';
-import Modal, { CloseButton } from '../components/modal/modal';
-import ResponsiveIframe from '../components/responsive-iframe';
 
 const CallToAction = ({ backgroundColor }) => {
   const [isOpen, setIsOpen] = useState(false);

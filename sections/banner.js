@@ -1,7 +1,4 @@
-import { jsx, Box, Container, Heading, Text, Button, Image } from 'theme-ui';
-// import paypal from '../assets/images/paypal.png';
-// import google from '../assets/images/google.png';
-// import dropbox from '../assets/images/dropbox.png';
+import { Box, Button, Container, Heading, Image, Text } from 'theme-ui';
 import AnimateWhenVisible from '../components/AnimateWhenVisible';
 
 const Banner = () => {

@@ -1,6 +1,8 @@
 backend:
-  name: proxy
-  proxy_url: http://localhost:8081/api/v1
+  name: git-gateway
+  accept_roles: #optional - accepts all users if left out
+    - admin
+    - editor
   branch: master # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: /public/uploads
@@ -106,32 +108,35 @@ collections:
         name: "date"
         widget: "datetime"
         dateFormat: "YYYY-MM-DD"
-      - label: Author
-        name: "author"
-        widget: relation
-        collection: "meta"
-        file: "authors"
-        searchFields:
-          - "authors.*.name"
-        displayFields:
-          - "authors.*.name"
-        valueField: "authors.*.slug"
-      - label: Tags
-        label_singular: "Tag"
-        name: "tags"
-        widget: list
-        summary: "{{fields.tag}}"
-        field:
-          label: Tag
-          name: tag
-          widget: relation
-          collection: "meta"
-          file: "tags"
-          searchFields:
-            - "tags.*.name"
-          displayFields:
-            - "tags.*.name"
-          valueField: "tags.*.slug"
+#      - label: Author
+#        name: "author"
+#        widget: relation
+#        collection: "meta"
+#        file: "authors"
+#        searchFields:
+#          - "authors.*.name"
+#        displayFields:
+#          - "authors.*.name"
+#        valueField: "authors.*.slug"
+#      - label: Tags
+#        label_singular: "Tag"
+#        name: "tags"
+#        widget: list
+#        summary: "{{fields.tag}}"
+#        field:
+#          label: Tag
+#          name: tag
+#          widget: relation
+#          collection: "meta"
+#          file: "tags"
+#          searchFields:
+#            - "tags.*.name"
+#          displayFields:
+#            - "tags.*.name"
+#          valueField: "tags.*.slug"
+      - label: "Description"
+        name: "description"
+        widget: "text"
       - label: "Body"
         name: "body"
         widget: "markdown"
