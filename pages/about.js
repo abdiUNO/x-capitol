@@ -1,20 +1,9 @@
 import React from 'react';
 import { Box, Container, jsx, Text, ThemeProvider, Message } from 'theme-ui';
-import theme from '../theme';
-import SEO from '../components/seo';
 import Layout from '../components/layout';
-import Banner from '../sections/banner';
-import UltimateFeatures from '../sections/ultimate-features';
-import Features from '../sections/features';
 import CallToAction from '../sections/call-to-action';
-import UsefulFeatures from '../sections/useful-features';
-import Pricing from '../sections/pricing';
-import Faq from '../sections/faq';
 import Image from '../components/image';
-const banner = '../assets/work.svg';
-const _banner = '../assets/team-work.svg';
 import SectionHeading from '../components/section-heading';
-import { LearnMore } from '../components/link';
 import { NextSeo } from 'next-seo';
 
 const checkFilledCircle = '../assets/images/icons/check-circle-filled.png';
@@ -40,7 +29,7 @@ const AboutUs = () => {
                   },
                 },
               }}>
-              <Image src={banner} alt="widgets" />
+              <Image src="../assets/work.svg" alt="widgets" />
             </AnimateWhenVisible>
           </Box>
           <Box sx={styles.rightContent}>

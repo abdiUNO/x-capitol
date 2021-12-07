@@ -1,29 +1,19 @@
-import { countPosts, listPostContent } from '../../lib/posts';
+import { countPosts, listPostContent } from '../../../lib/posts';
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import { jsx, Container, Box, Text } from 'theme-ui';
 
-import PostList from '../../components/postlist';
-import Layout from '../../components/layout';
+import PostList from '../../../components/postlist';
+import Layout from '../../../components/layout';
 
-import config from '../../lib/config';
+import config from '../../../lib/config';
 
-function truncate(str, n, useWordBoundary) {
-  if (str.length <= n) {
-    return str;
-  }
-  const subString = str.substr(0, n - 1); // the original check
-  return (
-    (useWordBoundary ? subString.substr(0, subString.lastIndexOf(' ')) : subString) +
-    '&hellip;'
-  );
-}
-
-export default function BlogPage({ posts, pagination }) {
+export default function Page({ posts, pagination }) {
   return (
     <Layout>
-      <NextSeo title="Blog | X Capitol" />
-
+      <Head>
+        <title>Blog | X Capitol</title>
+      </Head>
       <NextSeo title="Blog | X Capitol" />
       <Box sx={{ p: 1 }}>
         <Container>
@@ -49,6 +39,17 @@ export async function getStaticProps() {
     },
   };
 }
+
+export const getStaticPaths = async () => {
+  const pages = Math.ceil(countPosts() / config.posts_per_page);
+  const paths = Array.from(Array(pages - 1).keys()).map((it) => ({
+    params: { page: (it + 2).toString() },
+  }));
+  return {
+    paths: paths,
+    fallback: false,
+  };
+};
 
 const styles = {
   contentWrapper: {

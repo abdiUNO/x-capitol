@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { keyframes } from '@emotion/react';
-import { jsx, Box, Grid, Container, Flex, Text, Button } from 'theme-ui';
+import { Box, Button, Container, Flex, Grid, Text } from 'theme-ui';
 import SectionHeading from '../components/section-heading';
 import PriceTable from '../components/cards/price-table';
 import { rgba } from 'polished';
@@ -173,12 +173,7 @@ const Pricing = () => {
     }
   };
   return (
-    <Box
-      as="section"
-      id="pricing"
-      sx={styles.section}
-      variant="section.pricing"
-    >
+    <Box as="section" id="pricing" sx={styles.section} variant="section.pricing">
       <Container>
         <SectionHeading
           sx={styles.heading}
@@ -192,15 +187,13 @@ const Pricing = () => {
           <Button
             variant="text"
             onClick={() => handlePlan('monthly')}
-            className={`${plan.active === 'monthly' ? 'active' : ''}`}
-          >
+            className={`${plan.active === 'monthly' ? 'active' : ''}`}>
             Monthly Plan
           </Button>
           <Button
             variant="text"
             onClick={() => handlePlan('annual')}
-            className={`${plan.active === 'annual' ? 'active' : ''}`}
-          >
+            className={`${plan.active === 'annual' ? 'active' : ''}`}>
             Annual Plan
           </Button>
         </Flex>

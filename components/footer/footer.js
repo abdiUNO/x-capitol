@@ -1,8 +1,8 @@
-import { jsx, Box, Text, Container } from 'theme-ui';
+import { Box, Container, Text } from 'theme-ui';
 import Logo from '../logo';
 import { Link } from '../link';
-import FooterWidget from '../footer-widget';
-import { menuItems, footerNav } from './footer.data';
+import FooterWidget from '../FooterWidget';
+import { footerNav, menuItems } from './footer.data';
 import { rgba } from 'polished';
 
 export default function Footer() {

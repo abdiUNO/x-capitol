@@ -1,13 +1,11 @@
-import { jsx, Box, Button, Heading, Text } from 'theme-ui';
-import { IoMdCheckmarkCircle } from 'react-icons/io';
-import { IoIosCloseCircle } from 'react-icons/io';
+import { Box, Button, Heading, Text } from 'theme-ui';
+import { IoIosCloseCircle, IoMdCheckmarkCircle } from 'react-icons/io';
 
 const PriceTable = ({ price, isMonthly }) => {
   return (
     <Box
       sx={styles.priceTable}
-      className={`priceCard ${price.isRecommended ? 'recommended' : ''}`}
-    >
+      className={`priceCard ${price.isRecommended ? 'recommended' : ''}`}>
       {price?.isRecommended && (
         <Text as="span" sx={styles.recommended}>
           Recommended

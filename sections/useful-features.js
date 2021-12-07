@@ -1,4 +1,4 @@
-import { jsx, Box, Container } from 'theme-ui';
+import { Box, Container } from 'theme-ui';
 import SectionHeading from '../components/section-heading';
 import UltimateFeature from '../components/cards/ultimate-feature';
 
@@ -45,11 +45,7 @@ const UsefulFeatures = () => {
         />
         <Box sx={styles.features}>
           {data?.map((item) => (
-            <UltimateFeature
-              key={item.id}
-              data={item}
-              className="feature-item"
-            />
+            <UltimateFeature key={item.id} data={item} className="feature-item" />
           ))}
         </Box>
       </Container>
@@ -73,13 +69,7 @@ const styles = {
       maxWidth: ['none'],
       figure: {
         minWidth: '90px',
-        m: [
-          '0 auto 30px',
-          '0 auto 30px',
-          '0 auto 30px',
-          '0 auto 30px',
-          '0 26px 0 0',
-        ],
+        m: ['0 auto 30px', '0 auto 30px', '0 auto 30px', '0 auto 30px', '0 26px 0 0'],
       },
     },
   },

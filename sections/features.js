@@ -1,11 +1,11 @@
-import { jsx, Box, Container, Text } from 'theme-ui';
+import { Box, Container, Text } from 'theme-ui';
 import SectionHeading from '../components/section-heading';
 import Feature from '../components/cards/feature';
 import { LearnMore } from '../components/link';
 import Image from '../components/image';
+import { Fragment } from 'react';
 
 const checkFilledCircle = '/assets/images/icons/check-circle-filled.png';
-import { Fragment } from 'react';
 
 const data = [
   {

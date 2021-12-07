@@ -1,4 +1,3 @@
-import { jsx, Box, Container, Text } from 'theme-ui';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';

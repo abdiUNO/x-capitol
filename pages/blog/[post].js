@@ -1,18 +1,20 @@
 import React from 'react';
-import { GetStaticProps, GetStaticPaths } from 'next';
 import { renderToString } from 'react-dom/server';
 import matter from 'gray-matter';
-import { fetchPostContent } from '../../lib/posts';
 import fs from 'fs';
 import yaml from 'js-yaml';
+import moment from 'moment';
+import { parseISO } from 'date-fns';
+
+import { markdownToHtml } from '../../lib/markdown';
 
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
-import { jsx, Container, Box, Text } from 'theme-ui';
-
+import { Box, Container, Heading, Paragraph, Text, Divider } from 'theme-ui';
 import Layout from '../../components/layout';
+import Postitem from '../../components/postitem';
 
-import config from '../../lib/config';
+import { fetchPostContent } from '../../lib/posts';
 
 const slugToPostContent = ((postContents) => {
   let hash = {};
@@ -20,25 +22,13 @@ const slugToPostContent = ((postContents) => {
   return hash;
 })(fetchPostContent());
 
-export default function ServicesPage({
-  title,
-  dateString,
-  slug,
-  tags,
-  author,
-  description = '',
-  source,
-}) {
+export default function PostPage(props) {
   return (
     <Layout>
-      <Head>
-        <title>Blog | X Capitol</title>
-      </Head>
-      <NextSeo title="Blog | X Capitol" />
-      <Box sx={{ p: 4 }}>
+      <Box sx={{ p: 1, minHeight: '100vh' }}>
         <Container>
           <Box sx={styles.contentWrapper}>
-            <h1>{title}</h1>
+            <Postitem {...props} />
           </Box>
         </Container>
       </Box>
@@ -46,9 +36,19 @@ export default function ServicesPage({
   );
 }
 
+const styles = {
+  contentWrapper: {
+    pt: [9, 9, 9, 9, 150],
+    pb: [7, 7, 7, 7, 150],
+    display: 'flex',
+    width: ['100%', null, null, '650px', '745px'],
+    flexDirection: 'column',
+    mx: 'auto',
+  },
+};
+
 export const getStaticPaths = async () => {
   const paths = fetchPostContent().map((it) => '/blog/' + it.slug);
-  console.log('test');
   return {
     paths,
     fallback: false,
@@ -57,21 +57,22 @@ export const getStaticPaths = async () => {
 
 export async function getStaticProps({ params }) {
   const slug = params.post;
-  console.log(params);
   const source = fs.readFileSync(slugToPostContent[slug].fullPath, 'utf8');
   const { content, data } = matter(source, {
     engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) },
   });
+
+  const contentHtml = await markdownToHtml(content || '');
   const mdxSource = await renderToString(content, { scope: data });
+
   return {
     props: {
       title: data.title,
       dateString: data.date,
       slug: data.slug,
-      description: '',
-      tags: data.tags,
-      author: data.author,
+      content: contentHtml,
       source: mdxSource,
+      timeFormatted: moment(data.date).fromNow(),
     },
   };
 }

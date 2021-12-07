@@ -1,11 +1,11 @@
-import { jsx, Box, Container, Text } from 'theme-ui';
+import { Box, Container, Text } from 'theme-ui';
 import SectionHeading from '../components/section-heading';
 import { LearnMore } from '../components/link';
 import Image from '../components/image';
+import AnimateWhenVisible from '../components/AnimateWhenVisible';
 
 const banner = '/assets/products.svg';
 const checkFilledCircle = '/assets/images/icons/check-circle-filled.png';
-import AnimateWhenVisible from '../components/AnimateWhenVisible';
 
 const OurServices = () => {
   return (

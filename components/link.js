@@ -1,4 +1,4 @@
-import { jsx, Link as A } from 'theme-ui';
+import { Link as A } from 'theme-ui';
 import { Link as MenuLink } from 'react-scroll';
 import NextLink from 'next/link';
 import { HiOutlineChevronRight } from 'react-icons/hi';

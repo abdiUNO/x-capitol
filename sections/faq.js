@@ -1,9 +1,9 @@
-import { jsx, Container, Box } from 'theme-ui';
+import { Box, Container } from 'theme-ui';
 import SectionHeader from '../components/section-heading';
 import Accordion from '../components/accordion/accordion';
-import Image from '../components/image';
-const banner = '/assets/services.svg';
 import AnimateWhenVisible from '../components/AnimateWhenVisible';
+
+const banner = '/assets/services.svg';
 const faqs = [
   {
     title: 'Where do the funds come from?',
