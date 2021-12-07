@@ -19,6 +19,9 @@ const CallToAction = ({ backgroundColor }) => {
           <Button
             as="a"
             variant="primaryMd"
+            data-tf-slider="WfMkBbaI"
+            data-tf-iframe-props="title=X Capitol (Contact Us)"
+            target="_blank"
             sx={{ fontSize: '22px', lineHeight: '55px' }}>
             Contact Us Today
           </Button>

@@ -2,34 +2,87 @@ import { Box, Divider, Heading, Paragraph, Text } from 'theme-ui';
 import { rgba } from 'polished';
 
 import Pagination from './pagination';
+import AnimateWhenVisible from './AnimateWhenVisible';
+import { motion } from 'framer-motion';
+import { NoScrollLink } from './header/header';
 
 const capitalize = (str, lower = false) =>
   (lower ? str.toLowerCase() : str).replace(/(?:^|\s|["'([{])+\S/g, (match) =>
     match.toUpperCase()
   );
 
-const FooterWidget = ({ posts, pagination }) => {
+const postVariants = {
+  initial: { scale: 0.96, y: 30, opacity: 0 },
+  enter: {
+    scale: 1,
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96] },
+  },
+  exit: {
+    scale: 0.6,
+    y: 100,
+    opacity: 0,
+    transition: { duration: 0.2, ease: [0.48, 0.15, 0.25, 0.96] },
+  },
+};
+const transition = { duration: 0.5, ease: 'easeInOut' };
+
+const PostList = ({ posts, pagination }) => {
   return (
     <Box sx={styles.listWrapper}>
       <Box sx={styles.posts}>
         <ul className={'post-list'}>
           {posts.map((post, i) => {
-            // const tags =
-            //   post.tags.length === 1
-            //     ? capitalize(post.tags[0])
-            //     : post.tags.reduce((prev, curr) => `${prev}, ${capitalize(curr)}`);
+            if (post.tags.length > 0) post.tags[0] = capitalize(post.tags[0]);
+
+            const tags =
+              post.tags.length === 1
+                ? capitalize(post.tags[0])
+                : post.tags.reduce((prev, curr) => `${prev}, ${capitalize(curr)}`);
             return (
               <li key={i}>
-                {/*<Link href={`/blog/${post.slug}`}>*/}
-                <a href={`/blog/${post.slug}`}>
-                  <Heading sx={styles.title}>{post.title}</Heading>
-                  <Paragraph>{post.description}&#8230;</Paragraph>
-                  <Text as={'small'} sx={{ color: 'gray' }}>
-                    {post.timeFormatted}
-                  </Text>
-                  {i !== posts.length - 1 && <Divider />}
-                </a>
-                {/*</Link>*/}
+                <AnimateWhenVisible
+                  variants={{
+                    hidden: { y: 100, opacity: 0 },
+                    visible: {
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        type: 'spring',
+                        damping: 15,
+                        bounce: 0.4,
+                        duration: 0.8,
+                      },
+                    },
+                    enter: {
+                      scale: 1,
+                      y: 0,
+                      opacity: 1,
+                      transition: { duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96] },
+                    },
+                    exit: {
+                      scale: 0.6,
+                      y: 100,
+                      opacity: 0,
+                      transition: { duration: 0.2, ease: [0.48, 0.15, 0.25, 0.96] },
+                    },
+                  }}>
+                  {/*<Link href={`/blog/${post.slug}`}>*/}
+
+                  <NoScrollLink href={`/blog/${encodeURIComponent(post.slug)}`}>
+                    <a className="itemlink">
+                      <Heading sx={styles.title}>{post.title}</Heading>
+                      <Paragraph>{post.description}&#8230;</Paragraph>
+                      <Text as={'small'} sx={{ color: 'gray' }}>
+                        {post.timeFormatted} | {tags}
+                      </Text>
+                      {i !== posts.length - 1 && <Divider />}
+                    </a>
+                  </NoScrollLink>
+
+                  {/*</Link>*/}
+                </AnimateWhenVisible>
               </li>
             );
           })}
@@ -47,7 +100,7 @@ const FooterWidget = ({ posts, pagination }) => {
   );
 };
 
-export default FooterWidget;
+export default PostList;
 
 const styles = {
   title: {
@@ -82,6 +135,9 @@ const styles = {
         mb: 1,
       },
 
+      '.itemlink': {
+        cursor: 'pointer',
+      },
       span: {
         fontSize: 15,
         opacity: 0.9,

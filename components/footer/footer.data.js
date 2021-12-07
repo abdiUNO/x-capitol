@@ -4,20 +4,16 @@ export const menuItems = [
     title: 'Navigate',
     items: [
       {
-        path: '',
+        path: '/about',
         label: 'About',
       },
       {
-        path: '',
+        path: '/services',
         label: 'Services',
       },
       {
-        path: '',
+        path: '/blog',
         label: 'Blog',
-      },
-      {
-        path: '',
-        label: 'Press',
       },
     ],
   },
@@ -65,11 +61,11 @@ export const footerNav = [
     label: 'facebook',
   },
   {
-    path: 'mailto:funding@xcapitol.net',
-    label: 'email',
+    path: 'https://www.linkedin.com/in/osman-x-5000a112b/',
+    label: 'linkedin',
   },
   {
-    path: 'https://linkedin.com/osman-x-5000a112b/',
-    label: 'linkedin',
+    path: 'mailto:funding@xcapitol.net',
+    label: 'email',
   },
 ];

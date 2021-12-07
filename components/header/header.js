@@ -4,10 +4,16 @@ import Sticky from 'react-stickynode';
 import Logo from '../logo';
 import menuItems from './header.data';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
+
+export const NoScrollLink = ({ children, href, passHref }) => (
+  <Link href={href} passHref={passHref} scroll={false}>
+    {children}
+  </Link>
+);
 
 export default function Header() {
   const router = useRouter();
-  console.log(router);
 
   const [mobileMenu, setMobileMenu] = useState(false);
 
@@ -50,12 +56,11 @@ export default function Header() {
                     const className = `nav-item ${isActive}`;
                     return (
                       <li key={i}>
-                        <a
-                          href={`/${path}`}
-                          onClick={closeMobileMenu}
-                          className={className}>
-                          {label}
-                        </a>
+                        <NoScrollLink href={`/${path}`}>
+                          <a onClick={closeMobileMenu} className={className}>
+                            {label}
+                          </a>
+                        </NoScrollLink>
                       </li>
                     );
                   })}
@@ -63,7 +68,10 @@ export default function Header() {
                     <Button
                       as="a"
                       variant="muted"
-                      href="mailto:funding@xcapitol.net?subject=Request For Consultation"
+                      data-tf-slider="WfMkBbaI"
+                      data-tf-iframe-props="title=X Capitol (Contact Us)"
+                      target="_blank"
+                      sx={{ fontSize: '1rem', marginBottom: '2px' }}
                       onClick={closeMobileMenu}>
                       Contact
                     </Button>
@@ -157,11 +165,12 @@ const styles = {
     alignItems: 'center',
     p: 0,
     '.nav-item': {
+      fontSize: '1.075rem',
       textDecoration: 'none !important',
       cursor: 'pointer !important',
-      fontWeight: 400,
-      padding: 0,
-      margin: '0 20px !important',
+      fontWeight: 500,
+      padding: '10px 6px',
+      margin: '0 18px 0px 0px !important',
       color: '#343d48',
     },
     '.active': {

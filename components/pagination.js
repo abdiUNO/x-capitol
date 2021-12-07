@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from 'theme-ui';
+import { Box } from 'theme-ui';
 import { generatePagination } from '../lib/pagination';
 import Link from 'next/link';
 

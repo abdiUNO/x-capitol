@@ -30,3 +30,38 @@ a {
 .content :global(h3) {
   @apply text-xl font-semibold text-gray-700 my-4;
 }
+
+.nav-item{
+  display: inline-block;
+}
+
+.nav-item::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #28ddb2;
+  transform: scaleX(0);
+  transition: .5s cubic-bezier(.24,.59,.29,.87);
+}
+
+.nav-item:hover::after {
+  width: 100%;
+  transform: scaleX(1);
+}
+
+/*.nav-item::after {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  display: block;*/
+/*  background: #E14659;*/
+/*  left: 0;*/
+/*  bottom: 0;*/
+/*  height: 1px;*/
+/*  width: 100%;*/
+/*  transition: .3s cubic-bezier(.24,.59,.29,.87);*/
+/*  transform: scaleX(0);*/
+/*}*/
+
+/*.menu__link:hover::after {*/
+/*  transform: scaleX(1);*/
+/*}*/

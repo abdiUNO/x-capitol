@@ -30,6 +30,7 @@ export default function Footer() {
                   key={i}
                   variant="footer"
                   className={`socialicons accent-bg ${label}`}
+                  target="_blank"
                 />
               </li>
             ))}

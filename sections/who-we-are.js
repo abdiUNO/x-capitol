@@ -6,7 +6,7 @@ import AnimateWhenVisible from '../components/AnimateWhenVisible';
 
 const banner = '/assets/personal-finance.svg';
 
-const AboutUs = () => {
+const WhoWeAre = () => {
   return (
     <Box
       as="section"
@@ -19,12 +19,11 @@ const AboutUs = () => {
             <div style={{ display: 'block' }}>
               <AnimateWhenVisible
                 variants={{
-                  hidden: { y: 100, opacity: 0 },
+                  hidden: { y: 25, opacity: 0 },
                   visible: {
                     y: 0,
                     opacity: 1,
                     transition: {
-                      delay: 0.1,
                       type: 'spring',
                       bounce: 0.4,
                       duration: 0.8,
@@ -38,12 +37,13 @@ const AboutUs = () => {
           <Box sx={styles.rightContent}>
             <AnimateWhenVisible
               variants={{
-                hidden: { y: 100, opacity: 0 },
+                hidden: { y: 25, opacity: 0 },
                 visible: {
                   y: 0,
                   opacity: 1,
                   transition: {
                     type: 'spring',
+                    delay: 0.1,
                     bounce: 0.4,
                     duration: 0.8,
                   },
@@ -70,17 +70,19 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default WhoWeAre;
 
 const styles = {
   contentWrapper: {
     gap: [0, 0, 0, 0, 10, 100],
-    display: ['block', 'block', 'grid'],
+    display: ['flex', 'block', 'grid'],
+    flex: 1,
+    flexWrap: 'wrap-reverse',
     gridTemplateColumns: '1fr 1fr',
     alignItems: 'center',
   },
   leftContent: {
-    p: [15, 30, 50],
+    p: [55, 30, 50],
   },
   heading: {
     textAlign: 'left',

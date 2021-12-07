@@ -1,29 +1,30 @@
-import React from 'react';
-import { Box, Container, jsx, Text, ThemeProvider, Message } from 'theme-ui';
+import React, { useEffect } from 'react';
+import { Box, Container, Message, Text } from 'theme-ui';
 import Layout from '../components/layout';
 import CallToAction from '../sections/call-to-action';
 import Image from '../components/image';
 import SectionHeading from '../components/section-heading';
 import { NextSeo } from 'next-seo';
+import Script from 'next/script';
+import AnimateWhenVisible from '../components/AnimateWhenVisible';
+import BasicMeta from '../components/meta/BasicMeta';
 
 const checkFilledCircle = '../assets/images/icons/check-circle-filled.png';
-import AnimateWhenVisible from '../components/AnimateWhenVisible';
 
 const AboutUs = () => {
   return (
     <Box as="section" id="about-us" variant="section.aboutUs">
       <Container>
         <Box sx={styles.contentWrapper}>
-          <Box sx={styles.leftContent}>
+          <Box sx={styles.leftContentAbout}>
             <AnimateWhenVisible
               variants={{
-                hidden: { x: -200, opacity: 0 },
+                hidden: { x: -50, opacity: 0 },
                 visible: {
                   x: 0,
                   opacity: 1,
                   transition: {
                     type: 'spring',
-                    damping: 15,
                     bounce: 0.4,
                     duration: 0.8,
                   },
@@ -32,7 +33,7 @@ const AboutUs = () => {
               <Image src="../assets/work.svg" alt="widgets" />
             </AnimateWhenVisible>
           </Box>
-          <Box sx={styles.rightContent}>
+          <Box sx={styles.rightContentAbout}>
             <SectionHeading
               sx={styles.heading}
               title="About Us"
@@ -142,13 +143,12 @@ const OurVision = () => {
           <Box sx={styles.rightContent}>
             <AnimateWhenVisible
               variants={{
-                hidden: { y: 100, opacity: 0 },
+                hidden: { y: 50, opacity: 0 },
                 visible: {
                   y: 0,
                   opacity: 1,
                   transition: {
                     type: 'spring',
-                    damping: 15,
                     bounce: 0.4,
                     duration: 0.8,
                   },
@@ -164,9 +164,14 @@ const OurVision = () => {
 };
 
 export default function AboutPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Layout>
-      <NextSeo title="About | X Capitol" />
+      <BasicMeta url="/about" description={'about page'} title={'About'} />
+      <Script src="//embed.typeform.com/next/embed.js" />
+
       {/*<UltimateFeatures />*/}
 
       <AboutUs />
@@ -187,10 +192,17 @@ const styles = {
     alignItems: 'center',
   },
   rightContent: {
-    p: [15, 50, 0],
+    p: [30, 50, 0],
   },
   leftContent: {
     p: [15, 50, 0],
+  },
+
+  rightContentAbout: {
+    p: [15, 50, 0],
+  },
+  leftContentAbout: {
+    p: [30, 50, 0],
   },
   heading: {
     textAlign: 'left',

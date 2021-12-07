@@ -1,20 +1,20 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { renderToString } from 'react-dom/server';
 import matter from 'gray-matter';
 import fs from 'fs';
 import yaml from 'js-yaml';
 import moment from 'moment';
-import { parseISO } from 'date-fns';
-
 import { markdownToHtml } from '../../lib/markdown';
-
-import { NextSeo } from 'next-seo';
-import Head from 'next/head';
-import { Box, Container, Heading, Paragraph, Text, Divider } from 'theme-ui';
+import { Box, Container } from 'theme-ui';
 import Layout from '../../components/layout';
 import Postitem from '../../components/postitem';
-
+import Script from 'next/script';
 import { fetchPostContent } from '../../lib/posts';
+import { motion } from 'framer-motion';
+import BasicMeta from '../../components/meta/BasicMeta';
+import OpenGraphMeta from '../../components/meta/OpenGraphMeta';
+
+let easing = [0.175, 0.85, 0.42, 0.96];
 
 const slugToPostContent = ((postContents) => {
   let hash = {};
@@ -22,14 +22,41 @@ const slugToPostContent = ((postContents) => {
   return hash;
 })(fetchPostContent());
 
+const textVariants = {
+  exit: { y: 100, opacity: 0, transition: { duration: 0.5, ease: easing } },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: { delay: 0.1, duration: 0.5, ease: easing },
+  },
+};
+
 export default function PostPage(props) {
+  const url = `/blog/${props.slug}`;
+  console.log();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <Layout>
+    <Layout animate={true}>
+      <BasicMeta
+        url={url}
+        description={props.description}
+        title={props.title}
+        type="article"
+        publishedTime={props.dateString}
+        keywords={props.tags && props.tags.length > 0 && props.tags}
+      />
+      <Script src="//embed.typeform.com/next/embed.js" />
       <Box sx={{ p: 1, minHeight: '100vh' }}>
         <Container>
-          <Box sx={styles.contentWrapper}>
-            <Postitem {...props} />
-          </Box>
+          <motion.div initial="exit" animate="enter" exit="exit">
+            <Box sx={styles.contentWrapper}>
+              <motion.div variants={textVariants}>
+                <Postitem {...props} />
+              </motion.div>
+            </Box>
+          </motion.div>
         </Container>
       </Box>
     </Layout>
@@ -70,6 +97,7 @@ export async function getStaticProps({ params }) {
       title: data.title,
       dateString: data.date,
       slug: data.slug,
+      tags: data.tags,
       content: contentHtml,
       source: mdxSource,
       timeFormatted: moment(data.date).fromNow(),

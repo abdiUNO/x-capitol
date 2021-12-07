@@ -11,9 +11,15 @@ const Banner = () => {
             <Text as="p" sx={styles.text}>
               Strategize. Organize. Globalize.
             </Text>
-            <Button variant="primary" sx={styles.button}>
+            <Button
+              variant="primary"
+              data-tf-slider="WfMkBbaI"
+              data-tf-iframe-props="title=X Capitol (Contact Us)"
+              target="_blank"
+              sx={styles.button}>
               Get Started Now
             </Button>
+
             <Box sx={styles.clients}>
               {/*<Image src={paypal} alt="paypal" />*/}
               {/*<Image src={google} alt="google" />*/}
@@ -23,14 +29,14 @@ const Banner = () => {
           <Box sx={styles.illustration}>
             <AnimateWhenVisible
               variants={{
-                hidden: { x: 200, opacity: 0.2 },
+                hidden: { x: 35, opacity: 0 },
                 visible: {
                   x: 0,
                   opacity: 1,
                   transition: {
                     type: 'spring',
-                    bounce: 0.4,
-                    duration: 1,
+                    bounce: 0.2,
+                    duration: 0.6,
                   },
                 },
               }}>
