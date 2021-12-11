@@ -27,7 +27,7 @@ export default function PrivacyPage({ content, date }) {
       </Head>
       <BasicMeta
         url="/privacy"
-        description="privacy policy for x capitol"
+        description="Privacy Policy for X Capital"
         title="Privacy Policy"
         keywords={['privacy policy', 'privacy terms']}
       />

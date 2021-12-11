@@ -31,7 +31,11 @@ export default function IndexPage() {
 
   return (
     <Layout>
-      <BasicMeta url="/" description={'x capitol home'} title={'Home'} />
+      <BasicMeta
+        url="/"
+        description="At X Capital we offer financial consulting and funding at no cost to our clients. We take a personalized approach to our consultations to serve our clients and their various needs."
+        title={'Home'}
+      />
       <Script src="//embed.typeform.com/next/embed.js" />
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
 

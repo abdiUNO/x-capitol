@@ -18,7 +18,7 @@ export default function Page({ posts, pagination, page }) {
       </Head>
       <BasicMeta
         url={`/posts/page/${page}`}
-        description={'blog all post'}
+        description={'Blog page for X Capitol'}
         title={'All posts'}
       />
       <Script src="//embed.typeform.com/next/embed.js" />

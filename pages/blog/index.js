@@ -27,7 +27,7 @@ export default function BlogPage({ posts, pagination }) {
   }, []);
   return (
     <Layout animate={true}>
-      <BasicMeta url="/blog" description={'blog index page'} title={'Blog'} />
+      <BasicMeta url="/blog" description={'Blog page for X Capitol'} title={'Blog'} />
 
       <Script src="//embed.typeform.com/next/embed.js" />
       <Box sx={{ p: 1, pt: 4 }}>

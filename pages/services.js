@@ -12,7 +12,11 @@ export default function ServicesPage() {
   }, []);
   return (
     <Layout>
-      <BasicMeta url="/services" description={'services page'} title={'Services'} />
+      <BasicMeta
+        url="/services"
+        description="Here at X CAPITOL we help any start up, business, or individual gain access to funding and capital. Understanding which funding options work best for your business is something we're happy to do."
+        title={'Services'}
+      />
       <Script src="//embed.typeform.com/next/embed.js" />
 
       <ServicesList />

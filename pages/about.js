@@ -169,7 +169,11 @@ export default function AboutPage() {
   }, []);
   return (
     <Layout>
-      <BasicMeta url="/about" description={'about page'} title={'About'} />
+      <BasicMeta
+        url="/about"
+        description="At X Capital we offer financial consulting and funding at no cost to our clients. We take a personalized approach to our consultations to serve our clients and their various needs."
+        title={'About'}
+      />
       <Script src="//embed.typeform.com/next/embed.js" />
       <AboutUs />
       <CallToAction />
