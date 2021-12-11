@@ -23,7 +23,7 @@ export default function PrivacyPage({ content, date }) {
   return (
     <Layout animate={true}>
       <Head>
-        <title>Privacy Policy | X Capitol</title>
+        <title>Privacy Policy | X Capital</title>
       </Head>
       <BasicMeta
         url="/privacy"

@@ -22,7 +22,7 @@ const Banner = () => {
             <Button
               variant="primary"
               data-tf-slider="WfMkBbaI"
-              data-tf-iframe-props="title=X Capitol (Contact Us)"
+              data-tf-iframe-props="title=X Capital (Contact Us)"
               target="_blank"
               sx={styles.button}
               onClick={handleClick}>

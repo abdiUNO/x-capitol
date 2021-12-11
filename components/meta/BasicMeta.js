@@ -48,7 +48,7 @@ export default function BasicMeta({
               : null,
         }}
         twitter={{
-          site: 'X Capitol',
+          site: 'X Capital',
           cardType: 'summary_large_image',
         }}
       />

@@ -14,11 +14,11 @@ export default function Page({ posts, pagination, page }) {
   return (
     <Layout animate={true}>
       <Head>
-        <title>Blog | X Capitol</title>
+        <title>Blog | X Capital</title>
       </Head>
       <BasicMeta
         url={`/posts/page/${page}`}
-        description={'Blog page for X Capitol'}
+        description={'Blog page for X Capital'}
         title={'All posts'}
       />
       <Script src="//embed.typeform.com/next/embed.js" />

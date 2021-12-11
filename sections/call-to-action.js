@@ -25,7 +25,7 @@ const CallToAction = ({ backgroundColor }) => {
             as="a"
             variant="primaryMd"
             data-tf-slider="WfMkBbaI"
-            data-tf-iframe-props="title=X Capitol (Contact Us)"
+            data-tf-iframe-props="title=X Capital (Contact Us)"
             target="_blank"
             sx={{ fontSize: ['18px', 3, '21px'], lineHeight: '55px' }}
             onClick={handleClick}>

@@ -27,7 +27,7 @@ export default function BlogPage({ posts, pagination }) {
   }, []);
   return (
     <Layout animate={true}>
-      <BasicMeta url="/blog" description={'Blog page for X Capitol'} title={'Blog'} />
+      <BasicMeta url="/blog" description={'Blog page for X Capital'} title={'Blog'} />
 
       <Script src="//embed.typeform.com/next/embed.js" />
       <Box sx={{ p: 1, pt: 4 }}>
@@ -51,7 +51,7 @@ export default function BlogPage({ posts, pagination }) {
 }
 
 export async function getStaticProps() {
-  const posts = listPostContent(1, config.posts_per_page);
+  const posts = await listPostContent(1, config.posts_per_page);
   const pagination = {
     current: 1,
     pages: Math.ceil(countPosts() / config.posts_per_page),

@@ -46,7 +46,7 @@ const Features = () => {
         <SectionHeading
           sx={styles.heading}
           title="Funding & Capital"
-          description="Here at X CAPITOL we work with any start up, business or individual who needs funding and access to capital."
+          description="Here at X CAPITAL we work with any start up, business or individual who needs funding and access to capital."
         />
         <Box sx={styles.features}>
           {data?.map((item) => (

@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
       onExitComplete={() => window.scrollTo(0, 0)}>
       <ThemeProvider theme={theme}>
         <DefaultSeo
-          defaultTitle={'X Capitol'}
+          defaultTitle={'X Capital'}
           description={'Business Consultants'}
           language="English"
           additionalMetaTags={[
@@ -53,7 +53,7 @@ function MyApp({ Component, pageProps }) {
             },
             {
               name: 'application-name',
-              content: 'X Capitol',
+              content: 'X Capital',
             },
             {
               name: 'theme-color',
@@ -64,12 +64,12 @@ function MyApp({ Component, pageProps }) {
             type: 'website',
             locale: 'en_IE',
             url: 'https://xcapitalfunding.net/',
-            site_name: 'X Capitol',
+            site_name: 'X Capital',
             description: 'Business Consultants',
             images: ['https://xcapitalfunding.net/assets/images/x-capitol-cover.jpeg'],
           }}
           twitter={{
-            site: 'X Capitol',
+            site: 'X Capital',
             cardType: 'summary_large_image',
           }}
         />
