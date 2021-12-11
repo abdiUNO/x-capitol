@@ -1,7 +1,15 @@
 import { Box, Button, Container, Heading, Image, Text } from 'theme-ui';
 import AnimateWhenVisible from '../components/AnimateWhenVisible';
+import * as fbq from '../lib/fpixel';
+import { debugEvent, logEvent } from '../analytics';
 
 const Banner = () => {
+  const handleClick = () => {
+    debugEvent('Get Started Now');
+    logEvent('Contact', 'Clicked CAO Button', 'Get Started Now');
+    fbq.event('Contact');
+  };
+
   return (
     <Box id="home" as="section" variant="section.banner">
       <Container>
@@ -16,7 +24,8 @@ const Banner = () => {
               data-tf-slider="WfMkBbaI"
               data-tf-iframe-props="title=X Capitol (Contact Us)"
               target="_blank"
-              sx={styles.button}>
+              sx={styles.button}
+              onClick={handleClick}>
               Get Started Now
             </Button>
 

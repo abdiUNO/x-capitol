@@ -21,8 +21,8 @@ const FacebookPixel = ({ children }) => {
   }, []);
 
   return (
-    <>
-      <Script id="facebook-pixel">
+    <div>
+      <Script id="facebook-pixel" strategy="lazyOnload">
         {`
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -44,7 +44,7 @@ const FacebookPixel = ({ children }) => {
           src="https://www.facebook.com/tr?id=583792236035545&ev=PageView&noscript=1"
         />
       </noscript>
-    </>
+    </div>
   );
 };
 

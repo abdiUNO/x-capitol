@@ -1,5 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-import FacebookPixel from '../components/FacebookPixel';
+import { FB_PIXEL_ID } from '../lib/fpixel';
 
 class CustomDocument extends Document {
   static async getInitialProps(ctx) {
@@ -11,6 +11,7 @@ class CustomDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
+          <title>Home | X Capitol</title>
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta httpEquiv="Content-Type" content="text/html; charset=ISO-8859-1" />
           <meta
@@ -27,7 +28,14 @@ class CustomDocument extends Document {
           />
           <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
           <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-          <FacebookPixel />
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              style={{ display: 'none' }}
+              src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
+            />
+          </noscript>
         </Head>
         <body>
           <Main />
