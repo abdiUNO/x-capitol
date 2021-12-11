@@ -89,6 +89,8 @@ export async function getStaticProps({ params }) {
     engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) },
   });
 
+  console.log(data);
+
   const contentHtml = await markdownToHtml(content || '');
   const mdxSource = await renderToString(content, { scope: data });
 
@@ -100,6 +102,7 @@ export async function getStaticProps({ params }) {
       tags: data.tags,
       content: contentHtml,
       source: mdxSource,
+      description: data.description,
       timeFormatted: moment(data.date).fromNow(),
     },
   };
