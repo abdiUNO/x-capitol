@@ -7,19 +7,14 @@ const banner = '/assets/services.svg';
 const faqs = [
   {
     title: 'Where do the funds come from?',
-    contents: (
-      <div>
-        Aliquid ut occaecati impedit odit. Et a aut ab facere cum maxime ducimus.
-        Aspernatur ut est voluptatem commodi
-      </div>
-    ),
+    contents: <div>Financing is through our partner lenders.</div>,
   },
   {
     title: 'Will I have access to funds at any time?',
     contents: (
       <div>
-        Ea aliquid facilis ut magnam itaque. Voluptatibus occaecati veritatis aut qui
-        dolorum dolor unde et. Optio ut qui.
+        Yes, once the underwriting approval process is done you have access to funds and
+        can access them at anytime.
       </div>
     ),
   },
@@ -27,8 +22,10 @@ const faqs = [
     title: `How long is the underwriting (approval) process?`,
     contents: (
       <div>
-        Distinctio et ipsam ipsam enim quaerat dolore tempora rerum error. Qui laboriosam
-        dicta consequatur.
+        Generally speaking, it only takes a day or two to get the terms and approval
+        figured out for most financing options. Yet options like an SBA naturally take
+        longer on the contrary something of an MCA sort is very quick, within a day many
+        times.
       </div>
     ),
   },
@@ -36,8 +33,9 @@ const faqs = [
     title: `Why shouldn't I just go to a bank for a loan?`,
     contents: (
       <div>
-        Totam modi molestias natus explicabo doloribus eius in. Dolore et asperiores ab.
-        Quia voluptatibus placeat.
+        Naturally it will take much longer and the bank system dosen't guarantee the best
+        Return On Investment (ROI) beacuse they dont take a personalized approach. The
+        bank system takes the best option for themselves and not the client.
       </div>
     ),
   },
