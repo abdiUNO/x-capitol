@@ -66,12 +66,11 @@ function MyApp({ Component, pageProps }) {
             url: 'https://xcapitalfunding.net/',
             site_name: 'X Capitol',
             description: 'Business Consultants',
-            image: 'https://xcapitalfunding.net/assets/image/x-capitol-cover.jpeg',
+            images: ['https://xcapitalfunding.net/assets/images/x-capitol-cover.jpeg'],
           }}
           twitter={{
             site: 'X Capitol',
             cardType: 'summary_large_image',
-            image: 'https://xcapitalfunding.net/assets/image/x-capitol-cover.jpeg',
           }}
         />
         <Script

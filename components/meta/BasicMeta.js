@@ -28,10 +28,17 @@ export default function BasicMeta({
         ]}
         openGraph={{
           type: contentType,
-          url: 'https://x-capitol.netlify.app',
+          url: 'https://xcapitalfunding.net/',
           site_name: config.site_title,
           description: description ? description : config.site_description,
-          image: image ? image : config.base_url + '/assets/image/x-capitol-cover.jpeg',
+          images: [
+            image
+              ? image
+              : {
+                  url: config.base_url + '/assets/images/x-capitol-cover.jpeg',
+                  alt: 'Og Image Alt',
+                },
+          ],
           article:
             contentType === 'article'
               ? {
