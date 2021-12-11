@@ -65,9 +65,14 @@ const OurServices = () => {
                     <Image src={checkFilledCircle} alt="check icon" />
                     Funding through 401K / IRA
                   </Text>
+
                   <Text sx={styles.listItem} as="p">
                     <Image src={checkFilledCircle} alt="check icon" />
-                    Equipment Financing​
+                    Real Estate Financing
+                  </Text>
+                  <Text sx={styles.listItem} as="p">
+                    <Image src={checkFilledCircle} alt="check icon" />
+                    Equipment Financing
                   </Text>
                   <Text sx={styles.listItem} as="p">
                     <Image src={checkFilledCircle} alt="check icon" />

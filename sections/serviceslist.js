@@ -246,7 +246,7 @@ const services = [
     ),
   },
   {
-    title: `Equipment Financing`,
+    title: `Real Estate Financing`,
     contents: (
       <Box>
         <Text sx={styles.textItem}>
@@ -291,7 +291,7 @@ const services = [
     ),
   },
   {
-    title: `Real Estate Financing`,
+    title: `Equipment Financing`,
     contents: (
       <Box>
         <Text sx={styles.textItem}>
