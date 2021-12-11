@@ -291,6 +291,51 @@ const services = [
     ),
   },
   {
+    title: `Real Estate Financing`,
+    contents: (
+      <Box>
+        <Text sx={styles.textItem}>
+          Equipment Financing Equipment financing. loans help you purchase equipment with
+          competitive rates if you have good credit and good finances. The equipment
+          serves as collateral and the term is usually calculated off of the expected life
+          span of the purchased equipment.
+        </Text>
+        <Box>
+          <Text sx={styles.listHeader}>Pros:</Text>
+          <ul sx={styles.listWrapper}>
+            <li>
+              <Text>After payments complete you own the equipment.</Text>
+            </li>
+            <li>
+              <Text>
+                If you have good credit and strong finances you can get competitive rates.
+              </Text>
+            </li>
+          </ul>
+        </Box>
+        <Box>
+          <Text sx={styles.listHeader}>Cons:</Text>
+          <ul sx={styles.listWrapper}>
+            <li>
+              <Text>May need a down payment if credit history is not strong enough.</Text>
+            </li>
+          </ul>
+        </Box>
+
+        <Box>
+          <Text sx={styles.listHeader}>Best for:</Text>
+          <ul sx={styles.listWrapper}>
+            <li>
+              <Text>
+                Businesses in need of equipment with competitive financing rates.
+              </Text>
+            </li>
+          </ul>
+        </Box>
+      </Box>
+    ),
+  },
+  {
     title: `Terms Loans`,
     contents: (
       <Box>

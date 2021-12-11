@@ -47,9 +47,9 @@ export const menuItems = [
     title: 'Policy',
     items: [
       {
-        path: 'https://www.termsfeed.com/live/d8e9032f-3334-47a8-be17-06d6ea08cc86',
+        path: '/privacy',
         label: 'Privacy & Terms',
-        target: '_blank',
+        target: '',
       },
     ],
   },
