@@ -13,8 +13,8 @@ const faqs = [
     title: 'Will I have access to funds at any time?',
     contents: (
       <div>
-        Yes, once the underwriting approval process is done you have access to funds and
-        can access them at anytime.
+        Yes, once the deal is closed funds will be ready in a short amount of time with
+        the availability to access funds anytime.
       </div>
     ),
   },
@@ -33,9 +33,10 @@ const faqs = [
     title: `Why shouldn't I just go to a bank for a loan?`,
     contents: (
       <div>
-        Naturally it will take much longer and the bank system dosen't guarantee the best
-        Return On Investment (ROI) beacuse they dont take a personalized approach. The
-        bank system takes the best option for themselves and not the client.
+        Naturally it will take much longer and the bank system does not guarantee the best
+        Return On Investment (ROI) because banks don't take a personalized approach. The
+        bank system takes the best option for themselves and not the client with over 70%
+        of applicants being denied while also waiting weeks for a reply.{' '}
       </div>
     ),
   },

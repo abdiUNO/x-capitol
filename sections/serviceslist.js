@@ -52,8 +52,8 @@ const services = [
         <Text sx={styles.textItem}>
           A line of credit gives you access to funds up to your credit limit which can be
           borrowed and paid down multiple times while only paying interest on the money
-          you borrow. This is a flexible and typically unsecured way to borrow money for
-          businesses that need help managing cash flow or handling unexpected expenses.{' '}
+          you borrow. This is a flexible and typically unsecured way to gain funding for
+          businesses that need help managing cash flow or handling unexpected expenses.
         </Text>
         <Box>
           <Text sx={styles.listHeader}>Pros:</Text>
@@ -104,8 +104,8 @@ const services = [
         <Text sx={styles.textItem}>
           Short term loans that allow for very fast funding so you get a lump sum of cash
           with a predetermined payment term. Payment is usually made daily, weekly or
-          bi-weekly. The short term loan is best for businesses with high and consistent
-          sales that are in need of quick unsecured cash to use however you need.
+          bi-weekly. This short term loan is best for businesses with high and consistent
+          cash flow that are in need of quick unsecured cash to use however they need.
         </Text>
         <Box>
           <Text sx={styles.listHeader}>Pros:</Text>
@@ -154,10 +154,9 @@ const services = [
     contents: (
       <Box>
         <Text sx={styles.textItem}>
-          Working capital through unpaid invoices that your business has so you don’t have
-          to wait to be paid. You can also use future invoices to get cash immediately,
-          very fast funding eta compared to others. As quick as 2 days max to get
-          approved.
+          Secure working capital through unpaid invoices that your business has so you
+          don’t have to wait to be paid. Clients can also use future invoices to get cash
+          immediately with also a very fast funding ETA compared to other programs.{' '}
         </Text>
         <Box>
           <Text sx={styles.listHeader}>Pros:</Text>
@@ -187,9 +186,6 @@ const services = [
             <li>
               <Text>Businesses that have unpaid invoices that need cash right away.</Text>
             </li>
-            <li>
-              <Text>Invoice with 30,60,90 day payment terms are best.</Text>
-            </li>
           </ul>
         </Box>
       </Box>
@@ -216,8 +212,8 @@ const services = [
             </li>
             <li>
               <Text>
-                Can get access to their funds with little to no penalties also on paying
-                no interest on funds as it is theirs by default.{' '}
+                Can get access to their funds with little to no penalties also while
+                paying zero interest on funds as it is theirs by default.
               </Text>
             </li>
           </ul>
@@ -236,8 +232,8 @@ const services = [
           <ul sx={styles.listWrapper}>
             <li>
               <Text>
-                Clients who are in need of funds quick and have these account set up that
-                are looking to pay little to no interest.
+                Clients who are in need of funds quickly and already have these accounts
+                set up that are looking to pay little to no interest.
               </Text>
             </li>
           </ul>
@@ -250,21 +246,22 @@ const services = [
     contents: (
       <Box>
         <Text sx={styles.textItem}>
-          Equipment Financing Equipment financing. loans help you purchase equipment with
-          competitive rates if you have good credit and good finances. The equipment
-          serves as collateral and the term is usually calculated off of the expected life
-          span of the purchased equipment.
+          We offer financing to residential and commercial properties whether it be fix n
+          flips, new construction, or rehab we offer many different options to clients.
+          Along with the option to use existing properties as collateral to gain funding
+          as well if need be.
         </Text>
         <Box>
           <Text sx={styles.listHeader}>Pros:</Text>
           <ul sx={styles.listWrapper}>
             <li>
-              <Text>After payments complete you own the equipment.</Text>
+              <Text>Offers great rates while leveraging the property's value. </Text>
             </li>
             <li>
-              <Text>
-                If you have good credit and strong finances you can get competitive rates.
-              </Text>
+              <Text>Possibility to use a property as collateral.</Text>
+            </li>
+            <li>
+              <Text>Much longer terms with some options allowing up to 30 years.</Text>
             </li>
           </ul>
         </Box>
@@ -272,7 +269,10 @@ const services = [
           <Text sx={styles.listHeader}>Cons:</Text>
           <ul sx={styles.listWrapper}>
             <li>
-              <Text>May need a down payment if credit history is not strong enough.</Text>
+              <Text>
+                The property value or loan to value ratio (LTV) has more of a part to play
+                as the property is what is being financed.
+              </Text>
             </li>
           </ul>
         </Box>
@@ -281,9 +281,7 @@ const services = [
           <Text sx={styles.listHeader}>Best for:</Text>
           <ul sx={styles.listWrapper}>
             <li>
-              <Text>
-                Businesses in need of equipment with competitive financing rates.
-              </Text>
+              <Text>Businesses or individuals looking to purchase real estate.</Text>
             </li>
           </ul>
         </Box>
@@ -295,10 +293,9 @@ const services = [
     contents: (
       <Box>
         <Text sx={styles.textItem}>
-          Equipment Financing Equipment financing. loans help you purchase equipment with
-          competitive rates if you have good credit and good finances. The equipment
-          serves as collateral and the term is usually calculated off of the expected life
-          span of the purchased equipment.
+          Equipment financing loans help you purchase equipment for your business. The
+          equipment serves as collateral and the term is usually calculated off of the
+          expected life span of the purchased equipment.
         </Text>
         <Box>
           <Text sx={styles.listHeader}>Pros:</Text>
@@ -308,7 +305,8 @@ const services = [
             </li>
             <li>
               <Text>
-                If you have good credit and strong finances you can get competitive rates.
+                If you have good credit and strong finances you can qualify for
+                competitive rates.
               </Text>
             </li>
           </ul>
@@ -319,6 +317,9 @@ const services = [
             <li>
               <Text>May need a down payment if credit history is not strong enough.</Text>
             </li>
+            <li>
+              <Text>A home mortgage is necessary for this option.</Text>
+            </li>
           </ul>
         </Box>
 
@@ -326,9 +327,7 @@ const services = [
           <Text sx={styles.listHeader}>Best for:</Text>
           <ul sx={styles.listWrapper}>
             <li>
-              <Text>
-                Businesses in need of equipment with competitive financing rates.
-              </Text>
+              <Text>Businesses that are in need of equipment. </Text>
             </li>
           </ul>
         </Box>
@@ -373,12 +372,9 @@ const services = [
           <Text sx={styles.listHeader}>Best for:</Text>
           <ul sx={styles.listWrapper}>
             <li>
-              <Text>Businesses looking to grow.</Text>
-            </li>
-            <li>
               <Text>
-                Business owners with better credit and consistent business who can’t wait
-                for funding.
+                Business owners with strong credit and consistent sales who can’t wait for
+                funding.
               </Text>
             </li>
           </ul>
@@ -406,7 +402,7 @@ const services = [
               <Text>Lowest rates on the market.</Text>
             </li>
             <li>
-              <Text>Borrow as much as $5 million.</Text>
+              <Text>Borrow up to $5 million.</Text>
             </li>
             <li>
               <Text>Longer repayment terms 7-25 years.</Text>
@@ -422,6 +418,9 @@ const services = [
             <li>
               <Text>More qualifications required.</Text>
             </li>
+            <li>
+              <Text>Longer approval ETA.</Text>
+            </li>
           </ul>
         </Box>
 
@@ -432,7 +431,7 @@ const services = [
               <Text>Expanding businesses or refinancing debt.</Text>
             </li>
             <li>
-              <Text>Business with good credit willing to wait for funding.</Text>
+              <Text>Businesses that are willing to wait longer for funding.</Text>
             </li>
           </ul>
         </Box>

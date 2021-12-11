@@ -37,24 +37,24 @@ const AboutUs = () => {
             <SectionHeading
               sx={styles.heading}
               title="About Us"
-              description="At X Capitol we offer financial consulting at no cost only if a deal is funded."
+              description="At X Capital we offer financial consulting at no cost to our clients."
             />
 
             <Text sx={styles.textItem}>
-              Through our partner lenders we help you get the funding you deserve. Just
-              send in the required information on the apply page and get a consultation
-              for FREE. Working with a vast network of business owners and individuals, a
-              one stop shop for all your funding needs.
+              Through our partner lenders we help your business get the funding it needs.
+              Just send in the required information and get a consultation for free. We
+              work with a vast network of business owners and individuals, a one stop shop
+              for all your funding needs.
             </Text>
 
             <Text sx={styles.textItem}>
-              Our programs are designed to fund your business or project FAST and with
-              MAXIMUM funding with the best options to maximize business ROI. With NO
-              upfront cost or back door fees along with consultations that take a PERSONAL
-              touch.
+              Our programs are designed to fund your business or project fast and with
+              maximum funding with the best options to maximize business ROI. With no
+              upfront cost or back door fees along with consultations that take a personal
+              touch were happy to help.
             </Text>
             <Text sx={styles.textItem}>
-              Get the financing you need to keep growing TODAY! Don’t bother waiting weeks
+              Get the funding you need to keep growing today! Don’t bother waiting weeks
               for a reply from your local bank. <br />
             </Text>
 
@@ -95,13 +95,13 @@ const OurVision = () => {
             <SectionHeading
               sx={styles.heading}
               title="Our Vision"
-              description="Here at X CAPITOL we believe that EVERYONE has access to funding options regardless of their credit history."
+              description="Here at X Capital we believe that everyone should have access to funding options regardless of their credit history."
             />
 
             <Text sx={styles.textItem}>
-              Offering expertise in financial consultancy for our clients and delivering
+              Offering expertise in financial consulting to our clients and delivering
               maximum success with our quick turn around processing. All consultations are
-              FREE.
+              free.
             </Text>
 
             <Box>

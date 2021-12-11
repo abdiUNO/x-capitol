@@ -52,10 +52,10 @@ const WhoWeAre = () => {
               <SectionHeading
                 sx={styles.heading}
                 title="Who We Are"
-                description="At X Capitol we offer financial consulting at no cost only if a deal is funded. We take the utmost care with consultations to serve our various client and their needs."
+                description="At X Capital we offer financial consulting and funding at no cost to our clients. We take a personalized approach to our consultations to serve our clients and their various needs."
               />
               <Text sx={styles.textItem}>
-                Get the financing you need to keep growing TODAY! Don’t bother waiting
+                Get the financing you need to keep growing today! Don’t bother waiting
                 weeks for a reply from your local bank. <br />
               </Text>
 

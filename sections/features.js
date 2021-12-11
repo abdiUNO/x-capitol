@@ -13,14 +13,14 @@ const data = [
     icon: bulb,
     title: 'About Us',
     description:
-      'At X Capitol we offer financial consulting at no cost only if a deal is funded. We take the utmost care with consultations to serve our various client and their needs.',
+      'At X Capital we offer financial consulting and funding at no cost to our clients. We take a personalized approach to our consultations to serve our clients and their various needs.',
   },
   {
     id: 2,
     icon: dart,
     title: 'Our Vision',
     description:
-      'At X Capitol we help any business owners and startups gain the financial funding they need. Taking a consultative manner to the lending world delivering clients what they desire so often.',
+      "At X Capital we help any business owners and startups gain the financial funding they need. Taking a consultative manner to the lending world while delivering clients what they're looking for.",
   },
   {
     id: 3,
