@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/layout';
 import Banner from '../sections/banner';
-import UltimateFeatures from '../sections/ultimate-features';
+import Features from '../sections/features';
 import CallToAction from '../sections/call-to-action';
 import OurServices from '../sections/our-services';
 import WhoWeAre from '../sections/who-we-are';
@@ -9,7 +9,6 @@ import Faq from '../sections/faq';
 import { NextSeo } from 'next-seo';
 import Script from 'next/script';
 import BasicMeta from '../components/meta/BasicMeta';
-
 export default function IndexPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -34,9 +33,9 @@ export default function IndexPage() {
       <WhoWeAre />
 
       <OurServices />
-      <UltimateFeatures />
-
       <CallToAction />
+
+      <Features />
 
       <Faq />
 
