@@ -1,6 +1,8 @@
 import { Box, Heading, Image, Text } from 'theme-ui';
+import { FaPhone } from 'react-icons/fa';
 
-const UltimateFeature = ({ data, ...props }) => {
+const UltimateFeature = ({ data, iconComponent = null, ...props }) => {
+  console.log(iconComponent);
   return (
     <Box sx={styles.feature} {...props}>
       <figure>

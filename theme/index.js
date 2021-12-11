@@ -44,7 +44,7 @@ export default {
     // heading: 'Bree Serif',
     monospace: 'Menlo, monospace',
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+  fontSizes: [0, 12, 14, 16, 20, 24, 32, 48, 64],
   fontWeights: {
     body: 'normal',
     // body: 400,
@@ -116,14 +116,14 @@ export default {
       pt: [7, 7, 7, 7, 8],
       pb: [7, 7, 7, 7, 150],
     },
+    aboutUs: {
+      pb: [7, 7, 7, 7, 8, 9],
+      pt: [8, 8, 9, 9],
+    },
     ourVision: {
       backgroundColor: '#FFF7F5',
-      pt: [7, 7, 7, 7, 150],
-      pb: [7, 7, 7, 7, 150],
-    },
-    aboutUs: {
-      pt: [0, 7, 7, 8, 8, 7, 7],
-      pb: [7, 7, 7, 8, 9, 130, 150],
+      pt: [7, 7, 8, 9],
+      pb: [7, 7, 7, 7, 8],
     },
     pricing: {
       pt: [7, 7, 7, 7, 8],
@@ -136,6 +136,14 @@ export default {
     services: {
       pt: [175, 175, 175, 200],
       pb: [7, 7, 7, 7, 150],
+    },
+    contact: {
+      pt: [175, 175, 175, 200],
+      pb: [7, 7, 8, 8],
+    },
+    bookCall: {
+      pb: [6, 7, 7, 8],
+      backgroundColor: 'backgroundSecondary',
     },
   },
   text: {

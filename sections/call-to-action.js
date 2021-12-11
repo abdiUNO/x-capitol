@@ -9,7 +9,7 @@ const Play = '/assets/images/icons/play.png';
 const CallToAction = ({ backgroundColor }) => {
   const handleClick = () => {
     debugEvent('Contact Us Today');
-    logEvent('Contact', 'Clicked CAO Button', 'Contact Us Today');
+    logEvent('Contact', 'Clicked CTO Button', 'Contact Us Today');
     fbq.event('Contact');
   };
 
@@ -27,7 +27,7 @@ const CallToAction = ({ backgroundColor }) => {
             data-tf-slider="WfMkBbaI"
             data-tf-iframe-props="title=X Capitol (Contact Us)"
             target="_blank"
-            sx={{ fontSize: '22px', lineHeight: '55px' }}
+            sx={{ fontSize: ['18px', 3, '21px'], lineHeight: '55px' }}
             onClick={handleClick}>
             Contact Us Today
           </Button>
