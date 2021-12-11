@@ -63,16 +63,16 @@ function MyApp({ Component, pageProps }) {
           openGraph={{
             type: 'website',
             locale: 'en_IE',
-            url: 'https://x-capitol.netlify.app',
+            url: 'https://xcapitalfunding.net/',
             site_name: 'X Capitol',
             description: 'Business Consultants',
-            image: 'https://x-capitol.netlify.app/assets/image/x-capitol-logo.png',
+            image: 'https://xcapitalfunding.net/assets/image/x-capitol-cover.jpeg',
           }}
-          // twitter={{
-          //   handle: '@xcapitol',
-          //   site: 'X Capitol',
-          //   cardType: 'summary_large_image',
-          // }}
+          twitter={{
+            site: 'X Capitol',
+            cardType: 'summary_large_image',
+            image: 'https://xcapitalfunding.net/assets/image/x-capitol-cover.jpeg',
+          }}
         />
         <Script
           id="facebook-pixel"
