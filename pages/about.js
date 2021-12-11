@@ -30,7 +30,7 @@ const AboutUs = () => {
                   },
                 },
               }}>
-              <Image src="../assets/work.svg" alt="widgets" />
+              <Image src="/assets/work.svg" alt="widgets" />
             </AnimateWhenVisible>
           </Box>
           <Box sx={styles.rightContentAbout}>
@@ -171,24 +171,19 @@ export default function AboutPage() {
     <Layout>
       <BasicMeta url="/about" description={'about page'} title={'About'} />
       <Script src="//embed.typeform.com/next/embed.js" />
-
-      {/*<UltimateFeatures />*/}
-
       <AboutUs />
-      <OurVision />
       <CallToAction backgroundColor={'background'} />
-      {/*<Features />*/}
-      {/*<Pricing />*/}
+      <OurVision />
     </Layout>
   );
 }
 
 const styles = {
   contentWrapper: {
-    pt: [175, 7, 7, 7, 9],
-    gap: [0, 0, 0, 0, 10, 100],
+    pt: [175, 7, 7, 7, 8],
+    gap: [0, 0, 0, 25, 25, 100],
     display: ['block', 'block', 'grid'],
-    gridTemplateColumns: '1fr 2fr',
+    gridTemplateColumns: '0.9fr 2fr',
     alignItems: 'center',
   },
   rightContent: {
@@ -199,10 +194,10 @@ const styles = {
   },
 
   rightContentAbout: {
-    p: [15, 50, 0],
+    p: [30, 50, 0],
   },
   leftContentAbout: {
-    p: [30, 50, 0],
+    p: [30, 60, 0],
   },
   heading: {
     textAlign: 'left',
