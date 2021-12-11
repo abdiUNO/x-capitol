@@ -9,7 +9,7 @@ const Banner = () => {
           <Box sx={styles.content}>
             <Heading sx={styles.title}>Get your business funded today!</Heading>
             <Text as="p" sx={styles.text}>
-              Strategize. Organize. Globalize.
+              Apply. Fund. Grow.
             </Text>
             <Button
               variant="primary"

@@ -39,7 +39,7 @@ const data = [
   },
 ];
 
-const UltimateFeatures = () => {
+const Features = () => {
   return (
     <Box as="section" id="ultimate-feature" variant="section.ultimateFeature">
       <Container>
@@ -58,7 +58,7 @@ const UltimateFeatures = () => {
   );
 };
 
-export default UltimateFeatures;
+export default Features;
 
 const styles = {
   heading: {
