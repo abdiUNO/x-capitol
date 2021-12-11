@@ -111,7 +111,7 @@ const styles = {
         boxShadow: '0 6px 13px rgba(38, 78, 118, 0.1)',
         py: [12],
         '&.is-mobile-menu': {
-          backgroundColor: 'text',
+          // backgroundColor: 'text',
         },
       },
     },
