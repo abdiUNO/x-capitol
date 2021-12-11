@@ -15,6 +15,10 @@ export const menuItems = [
         path: '/blog',
         label: 'Blog',
       },
+      {
+        path: '/contact',
+        label: 'Contact',
+      },
     ],
   },
   {

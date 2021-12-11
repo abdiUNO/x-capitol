@@ -28,7 +28,7 @@ const data = [
     id: 1,
     icon: <FaPhone color="#10132D" size="20px" />,
     text: (
-      <a href="tel:402-909-1040">
+      <a href="tel:402-909-1040" target="_blank" rel="noreferrer">
         Call us at
         <br />
         402-909-1040
@@ -40,7 +40,7 @@ const data = [
     icon: <FaEnvelope color="#10132D" size="20px" />,
     title: '',
     text: (
-      <a href="mailto:funding@xcapitol.net">
+      <a href="mailto:funding@xcapitol.net" target="_blank" rel="noreferrer">
         Email us at
         <br />
         funding@xcapitol.net
@@ -51,11 +51,11 @@ const data = [
     id: 3,
     icon: <FaMapMarkerAlt color="#10132D" size="20px" />,
     text: (
-      <>
+      <a href="#">
         530 South 13th Street
         <br />
         Lincoln, NE
-      </>
+      </a>
     ),
   },
 ];
@@ -199,11 +199,10 @@ const styles = {
 
   blockText: {
     fontSize: [3],
-    fontWeight: 500,
+    fontWeight: 600,
     color: 'text',
     p: '0 4px',
-    letterSpacing: '1px',
-    lineHeight: 1.8,
+    lineHeight: 1.9,
   },
 
   listItem: {

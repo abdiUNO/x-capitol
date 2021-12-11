@@ -65,16 +65,13 @@ export default function Header() {
                     );
                   })}
                   <li>
-                    <Button
-                      as="a"
-                      variant="muted"
-                      data-tf-slider="WfMkBbaI"
-                      data-tf-iframe-props="title=X Capitol (Contact Us)"
-                      target="_blank"
-                      sx={{ fontSize: '1rem', marginBottom: '2px' }}
-                      onClick={closeMobileMenu}>
-                      Contact
-                    </Button>
+                    <NoScrollLink href={`/contact`}>
+                      <a
+                        className={`nav-item ${router.asPath === '/contact' && 'active'}`}
+                        onClick={closeMobileMenu}>
+                        Contact
+                      </a>
+                    </NoScrollLink>
                   </li>
                 </Box>
                 {/*<Button variant="primaryMd" sx={styles.explore}>*/}
