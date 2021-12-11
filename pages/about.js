@@ -172,7 +172,7 @@ export default function AboutPage() {
       <BasicMeta url="/about" description={'about page'} title={'About'} />
       <Script src="//embed.typeform.com/next/embed.js" />
       <AboutUs />
-      <CallToAction backgroundColor={'background'} />
+      <CallToAction />
       <OurVision />
     </Layout>
   );
