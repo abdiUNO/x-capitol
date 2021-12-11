@@ -9,7 +9,12 @@ import Faq from '../sections/faq';
 import { NextSeo } from 'next-seo';
 import Script from 'next/script';
 import BasicMeta from '../components/meta/BasicMeta';
+import * as fbq from '../lib/fpixel';
+
 export default function IndexPage() {
+  const handleClick = () => {
+    fbq.event('Purchase', { currency: 'USD', value: 10 });
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -29,6 +34,7 @@ export default function IndexPage() {
       <BasicMeta url="/" description={'x capitol home'} title={'Home'} />
       <Script src="//embed.typeform.com/next/embed.js" />
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+
       <Banner />
       <WhoWeAre />
 
