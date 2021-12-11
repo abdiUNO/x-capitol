@@ -1,6 +1,6 @@
 import { Box, Heading, Text } from 'theme-ui';
 
-const Content = ({ children }) => {
+export const Content = ({ children }) => {
   return <Box className="content">{children}</Box>;
 };
 
