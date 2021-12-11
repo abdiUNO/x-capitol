@@ -89,6 +89,7 @@ function MyApp({ Component, pageProps }) {
         {/*  `,*/}
         {/*  }}*/}
         {/*/>*/}
+
         <Script id="facebook-pixel">
           {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -101,41 +102,10 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '583792236035545');
 fbq('track', 'PageView')`}
         </Script>
+
         <div id="fb-root"></div>
-        <div id="fb-customer-chat" className="fb-customerchat"></div>
-        <div
-          className="fb-customerchat"
-          attribution="install_email"
-          attribution_version="biz_inbox"
-          page_id="100203922072384"
-        />
+
         <Component {...pageProps} />
-
-        <Script id="fb-chat">
-          {`
-            var chatbox = document.getElementById('fb-customer-chat');
-            chatbox.setAttribute("page_id", "100203922072384");
-            chatbox.setAttribute("attribution", "biz_inbox");
-          `}
-        </Script>
-        <Script id="fb-chat-sdk">
-          {`
-            window.fbAsyncInit = function() {
-              FB.init({
-                xfbml            : true,
-                version          : 'v12.0'
-              });
-            };
-
-            (function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s); js.id = id;
-              js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-          `}
-        </Script>
       </ThemeProvider>
     </AnimatePresence>
   );
