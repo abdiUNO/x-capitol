@@ -23,9 +23,22 @@ class CustomDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
 
           <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;700&family=Montserrat:wght@400;700&family=Poppins:wght@300;400&family=Roboto+Mono&family=Roboto:wght@400;500;900&display=swap"
+          />
+
+          <link
             href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;700&family=Montserrat:wght@400;700&family=Poppins:wght@300;400&family=Roboto+Mono&family=Roboto:wght@400;500;900&display=swap"
             rel="stylesheet"
           />
+
+          <noscript>
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;700&family=Montserrat:wght@400;700&family=Poppins:wght@300;400&family=Roboto+Mono&family=Roboto:wght@400;500;900&display=swap"
+            />
+          </noscript>
 
           <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
           <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
