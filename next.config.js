@@ -4,7 +4,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
-  productionBrowserSourceMaps: true,
   future: {
     webpack5: true, // by default, if you customize webpack config, they switch back to version 4.
     // Looks like backward compatibility approach.
