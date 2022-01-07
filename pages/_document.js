@@ -18,14 +18,15 @@ class CustomDocument extends Document {
             name="facebook-domain-verification"
             content="6mlkn3mi1bvrv35aojqjm71sjiz891"
           />
+
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:900"
+            href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;700&family=Montserrat:wght@400;700&family=Poppins:wght@300;400&family=Roboto+Mono&family=Roboto:wght@400;500;900&display=swap"
             rel="stylesheet"
           />
-          <link
-            href="https://fonts.googleapis.com/css?family=Eczar:400,700|Montserrat:400,700|Poppins:300,400|Roboto+Mono|Roboto:400,500,900|Spectral"
-            rel="stylesheet"
-          />
+
           <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
           <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
           <noscript>
